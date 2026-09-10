@@ -6,7 +6,7 @@
 > **Canonical for:** estado operativo, alcance de edición y siguiente acción  
 > **Sources:** conversación inicial del equipo  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-09
+> **Last reviewed:** 2026-09-10
 
 ## Empieza aquí
 
@@ -15,24 +15,27 @@ instrucciones de [`../AGENTS.md`](../AGENTS.md).
 
 ## Hito actual
 
-Investigar cómo BIM, los estándares de intercambio estructural y los modelos de
-información de plantas industriales separan objetos, tipos, sistemas, geometría,
-materiales, relaciones, modelos analíticos y requisitos de información.
+Aplicar el mapa mental mínimo de IFC a ejemplos civiles concretos para descubrir
+cómo deben separarse realidad física, representación, relaciones, jerarquías,
+acciones y modelos analíticos.
 
 ## Documento activo
 
-[`research/IFC_CORE_CONCEPTS.md`](research/IFC_CORE_CONCEPTS.md) es el único informe
-de investigación en redacción.
+[`FIRST_ITERATION.md`](FIRST_ITERATION.md) coordina la primera iteración del equipo,
+su batería común de preguntas y el ejemplo resuelto.
 
 ## Alcance de edición actual
 
 | Documento | Uso permitido |
 |---|---|
-| `research/IFC_CORE_CONCEPTS.md` | Completar y revisar el estudio didáctico del núcleo IFC |
-| `BIM_REFERENCE_MAP.md` | Actualización coordinada de estado, enlaces y hallazgos comparables |
+| `FIRST_ITERATION.md` | Documento principal: ajustar alcance, preguntas, ejemplos y reparto inicial |
+| `research/IFC_CORE_CONCEPTS.md` | Referencia didáctica; editar solo si la aplicación de los ejemplos descubre una corrección |
+| `BIM_REFERENCE_MAP.md` | Actualización coordinada únicamente si cambia el frente de investigación |
 | `WORKING_SET.md` | Mantener el estado presente y la siguiente acción |
 | `WORK_LOG.md` | Registrar el bloque únicamente cuando se cierre |
 | `../README.md` | Ajustar la presentación si cambia el propósito del repositorio |
+| `../README.pdf` | Copia generada del README para consulta; no es fuente editable |
+| `research/IFC_CORE_CONCEPTS.pdf` | Copia generada del estudio IFC; regenerar cuando cambie el Markdown |
 | `../AGENTS.md` | Ajustar reglas de trabajo cuando el equipo lo acuerde |
 
 [`ELEMENT_INVENTORY.md`](ELEMENT_INVENTORY.md) y
@@ -42,11 +45,11 @@ recomendaciones explícitas antes de trasladar conceptos al inventario.
 
 ## Siguiente acción
 
-Revisar con el equipo el primer estudio del núcleo IFC y contrastar sus preguntas
-abiertas con ejemplos de pipe rack, viga, equipo y zapata. Después se decidirá si el
-frente IFC necesita una segunda pasada antes de abrir la investigación del modelo
-estructural analítico.
+Cada participante prepara una primera ficha breve usando el caso común y la batería
+de [`FIRST_ITERATION.md`](FIRST_ITERATION.md). En la siguiente reunión se compararán
+las cuatro lecturas para precisar el foco de cada frente, consolidar preguntas y
+decidir qué conceptos requieren una segunda investigación.
 
-El informe debe identificar qué problemas resuelve IFC, qué separaciones son útiles,
-qué conceptos propone para el inventario y qué complejidad no conviene heredar. No es
-objetivo leer por completo el esquema ni adoptar IFC como modelo propio.
+No se diseñarán todavía tablas, clases o una jerarquía canónica. El resultado buscado
+es un mapa conceptual comparable y una delimitación más precisa del trabajo de
+Alberto, Luis, Miguel y Ángel.

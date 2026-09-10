@@ -111,6 +111,8 @@ estables y casos reales compatibles en ambos proyectos.
 
 - [WORKING_SET.md](docs/WORKING_SET.md): estado actual, único frente editable y
   siguiente acción. Es la puerta de entrada para trabajar.
+- [FIRST_ITERATION.md](docs/FIRST_ITERATION.md): batería de preguntas, reparto
+  inicial y ejemplo resuelto para preparar la próxima discusión.
 - [IFC_CORE_CONCEPTS.md](docs/research/IFC_CORE_CONCEPTS.md): primera explicación
   didáctica y preguntas para el equipo.
 - [BIM_REFERENCE_MAP.md](docs/BIM_REFERENCE_MAP.md): mapa de investigaciones,
@@ -125,3 +127,13 @@ estables y casos reales compatibles en ambos proyectos.
 La estructura del repositorio crecerá únicamente cuando exista contenido real que
 lo justifique. Antes de editar, empezar siempre por
 [WORKING_SET.md](docs/WORKING_SET.md).
+
+## Versiones PDF
+
+Para lectura o distribución sin herramientas adicionales:
+
+- [Introducción al repositorio](README.pdf).
+- [Fundamentos conceptuales de IFC](docs/research/IFC_CORE_CONCEPTS.pdf).
+
+Los archivos Markdown son las fuentes editables. Los PDF son copias generadas y
+deben regenerarse cuando cambie su documento de origen.
