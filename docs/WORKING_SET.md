@@ -6,7 +6,7 @@
 > **Canonical for:** estado operativo, alcance de edición y siguiente acción  
 > **Sources:** conversación inicial del equipo  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-10
+> **Last reviewed:** 2026-09-11
 
 ## Empieza aquí
 
@@ -29,6 +29,7 @@ su batería común de preguntas y el ejemplo resuelto.
 | Documento | Uso permitido |
 |---|---|
 | `FIRST_ITERATION.md` | Documento principal: ajustar alcance, preguntas, ejemplos y reparto inicial |
+| `FICHA_ACCIONES_CARGAS.md` | Ficha individual de Miguel (foco "Acciones y cargas"); cada participante edita solo su propia ficha |
 | `research/IFC_CORE_CONCEPTS.md` | Referencia didáctica; editar solo si la aplicación de los ejemplos descubre una corrección |
 | `BIM_REFERENCE_MAP.md` | Actualización coordinada únicamente si cambia el frente de investigación |
 | `WORKING_SET.md` | Mantener el estado presente y la siguiente acción |

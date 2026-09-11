@@ -6,7 +6,7 @@
 > **Canonical for:** historial resumido del trabajo realizado  
 > **Sources:** historial Git y documentos enlazados por cada entrada  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-10
+> **Last reviewed:** 2026-09-11
 
 ## Regla de registro
 
@@ -70,3 +70,35 @@ frente y decidir qué conceptos requieren investigación adicional.
 
 **Siguiente acción:** preparar las fichas individuales y utilizarlas como entrada de
 la próxima reunión, sin diseñar todavía tablas o clases definitivas.
+
+### 2026-09-11 — Ficha individual de Miguel (Acciones y cargas)
+
+**Objetivo:** construir, pregunta a pregunta, la ficha individual del foco
+"Acciones y cargas" a partir del ejemplo de un depósito (`EQ-101`) apoyado
+sobre la estructura soporte.
+
+**Resultado:**
+
+- se recorrió la batería común aplicada al ejemplo (bloques A, E y F, más
+  la pregunta específica de sistema de coordenadas y convenio de signos);
+- se fijó la separación entre objeto físico, Acción, agrupación (caso de
+  carga) y aplicación analítica, evitando guardar la carga como propiedad
+  de un elemento físico;
+- se identificaron dos representaciones analíticas alternativas (nodo vs.
+  barra) para la misma acción física;
+- se registraron 5 conceptos candidatos, 3 dudas para la reunión y un
+  ejemplo de simplificación válida frente a un diseño frágil;
+- se creó `FICHA_ACCIONES_CARGAS.md` y se incorporó al alcance editable de
+  `WORKING_SET.md`.
+
+**Documentos afectados:** `docs/FICHA_ACCIONES_CARGAS.md` (nuevo),
+`docs/WORKING_SET.md`.
+
+**Cuestiones abiertas:** las 3 dudas recogidas en la ficha (cambio de TAG
+ante revisiones de diseño, dónde vive el convenio de signos, cuándo
+ampliar el alcance de un apoyo individual al reparto entre varios apoyos).
+
+**Commit:** commit de la rama `develop` que contiene esta entrada.
+
+**Siguiente acción:** contrastar esta ficha con las de Alberto, Luis y
+Ángel en la próxima reunión, según `FIRST_ITERATION.md` sección 7.
