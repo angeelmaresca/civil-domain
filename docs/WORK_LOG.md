@@ -6,7 +6,7 @@
 > **Canonical for:** historial resumido del trabajo realizado  
 > **Sources:** historial Git y documentos enlazados por cada entrada  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-11
+> **Last reviewed:** 2026-09-14
 
 ## Regla de registro
 
@@ -15,6 +15,32 @@ afectados, las cuestiones que permanecen abiertas, los commits y la siguiente
 acción. No debe copiar aquí el razonamiento que pertenece al documento conceptual.
 
 ## Entradas
+
+### 2026-09-14 — Ficha individual de Luis (Zapata)
+
+**Objetivo:** preparar la aportación de Luis a la primera iteración a partir de
+las entrevistas del 11 y 14 de septiembre.
+
+**Resultado:** se redactó la [ficha de zapata](FICHA_ZAPATA.md), incluyendo identidad,
+tipos, geometría, armado, emplazamiento, encepados y elementos profundos separados.
+Se incorporaron métodos de análisis manuales, algorítmicos y de elementos finitos,
+y una propuesta transversal de comprobaciones y validación técnica trazable.
+La ficha permanece `DRAFT`; su publicación no aprueba el modelo de dominio.
+
+**Documentos afectados:** `docs/FICHA_ZAPATA.md`, `docs/WORKING_SET.md` y este registro.
+
+**Cuestiones abiertas:** las propuestas de clasificación, tipos, asignación
+geotécnica y validación se contrastarán con el equipo; los detalles pendientes
+permanecen en la ficha.
+
+**Validación:** revisión del contenido, enlaces locales y diff sin errores de
+espacios; alcance limitado a la ficha de Luis y documentos de coordinación.
+
+**Commit:** commit de `develop` que contiene esta entrada, autorizado por Luis
+mediante «súbelos».
+
+**Siguiente acción:** revisar la ficha con Luis y compararla con las demás
+aportaciones de la primera iteración.
 
 ### 2026-09-09 — Inicio del dominio e investigación BIM
 

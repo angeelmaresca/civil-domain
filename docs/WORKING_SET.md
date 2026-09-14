@@ -6,7 +6,7 @@
 > **Canonical for:** estado operativo, alcance de edición y siguiente acción  
 > **Sources:** conversación inicial del equipo  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-11
+> **Last reviewed:** 2026-09-14
 
 ## Empieza aquí
 
@@ -30,6 +30,7 @@ su batería común de preguntas y el ejemplo resuelto.
 |---|---|
 | `FIRST_ITERATION.md` | Documento principal: ajustar alcance, preguntas, ejemplos y reparto inicial |
 | `FICHA_ACCIONES_CARGAS.md` | Ficha individual de Miguel (foco "Acciones y cargas"); cada participante edita solo su propia ficha |
+| `FICHA_ZAPATA.md` | Ficha individual de Luis; preparar y corregir el borrador de la entrevista antes de compararlo con el equipo |
 | `research/IFC_CORE_CONCEPTS.md` | Referencia didáctica; editar solo si la aplicación de los ejemplos descubre una corrección |
 | `BIM_REFERENCE_MAP.md` | Actualización coordinada únicamente si cambia el frente de investigación |
 | `WORKING_SET.md` | Mantener el estado presente y la siguiente acción |
@@ -45,6 +46,10 @@ pero no son frentes editables durante este hito. La investigación debe terminar
 recomendaciones explícitas antes de trasladar conceptos al inventario.
 
 ## Siguiente acción
+
+Luis revisa y corrige su [ficha de zapata](FICHA_ZAPATA.md), redactada a partir de
+las entrevistas del 11 y 14 de septiembre, incluida la ampliación sobre encepados,
+métodos de análisis y validación técnica. Sus propuestas siguen en estado `DRAFT`.
 
 Cada participante prepara una primera ficha breve usando el caso común y la batería
 de [`FIRST_ITERATION.md`](FIRST_ITERATION.md). En la siguiente reunión se compararán
