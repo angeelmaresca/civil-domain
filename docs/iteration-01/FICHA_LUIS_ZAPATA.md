@@ -4,7 +4,7 @@
 > **Editable:** sí; ficha individual de Luis para revisión dentro del alcance de `WORKING_SET.md`
 > **Document owner:** Luis
 > **Canonical for:** —
-> **Sources:** [Primera iteración](FIRST_ITERATION.md), entrevistas con Luis del 2026-09-11 y 2026-09-14
+> **Sources:** [Primera iteración](ENUNCIADO.md), entrevistas con Luis del 2026-09-11 y 2026-09-14
 > **Supersedes:** —
 > **Last reviewed:** 2026-09-14
 
@@ -13,7 +13,7 @@
 Borrador de la aportación de Luis, pendiente de su corrección y del contraste con
 el equipo. Recoge sus criterios de dominio y experiencia; no establece reglas
 normativas ni decisiones aprobadas. El encargo y la batería común pertenecen a
-[FIRST_ITERATION.md](FIRST_ITERATION.md). Las soluciones de Footings V2 no se
+[ENUNCIADO.md](ENUNCIADO.md). Las soluciones de Footings V2 no se
 trasladan automáticamente al dominio civil. La ampliación del 14 de septiembre
 incorpora encepados, métodos de análisis y una propuesta transversal de validación
 técnica para los elementos del ecosistema TR.
@@ -269,7 +269,7 @@ un catálogo formal de estados o un mecanismo de firma: lo requerido es que la
 suficiencia y la aprobación humana queden explícitas y sean trazables.
 
 Las acciones y su aplicación analítica se contrastarán con la
-[ficha de Miguel](FICHA_ACCIONES_CARGAS.md), que mantiene la propuesta de ese frente;
+[ficha de Miguel](FICHA_MIGUEL_ACCIONES_CARGAS.md), que mantiene la propuesta de ese frente;
 no se duplica aquí su definición.
 
 ## 6. Mapa de objetos y relaciones

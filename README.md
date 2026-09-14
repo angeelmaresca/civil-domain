@@ -111,8 +111,10 @@ estables y casos reales compatibles en ambos proyectos.
 
 - [WORKING_SET.md](docs/WORKING_SET.md): estado actual, único frente editable y
   siguiente acción. Es la puerta de entrada para trabajar.
-- [FIRST_ITERATION.md](docs/FIRST_ITERATION.md): batería de preguntas, reparto
-  inicial y ejemplo resuelto para preparar la próxima discusión.
+- [Primera iteración](docs/iteration-01/ENUNCIADO.md): batería de preguntas, reparto
+  inicial y ejemplo resuelto.
+- [Síntesis de la primera iteración](docs/iteration-01/SINTESIS.md): lectura conjunta
+  de las fichas disponibles y cuestiones para la reunión; sigue en borrador.
 - [IFC_CORE_CONCEPTS.md](docs/research/IFC_CORE_CONCEPTS.md): primera explicación
   didáctica y preguntas para el equipo.
 - [BIM_REFERENCE_MAP.md](docs/BIM_REFERENCE_MAP.md): mapa de investigaciones,

@@ -4,7 +4,7 @@
 > **Editable:** sí mientras figure como documento activo en `WORKING_SET.md`
 > **Document owner:** equipo de dominio civil
 > **Canonical for:** —
-> **Sources:** [`IFC_CORE_CONCEPTS.md`](research/IFC_CORE_CONCEPTS.md), experiencia del equipo y casos de Footings
+> **Sources:** [`IFC_CORE_CONCEPTS.md`](../research/IFC_CORE_CONCEPTS.md), experiencia del equipo y casos de Footings
 > **Supersedes:** —
 > **Last reviewed:** 2026-09-10
 
@@ -331,3 +331,13 @@ coincidencias y contradicciones entre las cuatro fichas:
 
 El resultado será una revisión del alcance de cada foco, no la aprobación del modelo
 de entidades.
+
+## 8. Material disponible para el contraste
+
+- [Ficha de Ángel — columna física y modelos analíticos](FICHA_ANGEL_COLUMNA.md).
+- [Ficha de Luis — zapata y encepado](FICHA_LUIS_ZAPATA.md).
+- [Ficha de Miguel — acciones y cargas](FICHA_MIGUEL_ACCIONES_CARGAS.md).
+- [Síntesis transversal DRAFT](SINTESIS.md).
+
+La ficha de Alberto sobre conexiones todavía no está incorporada. La síntesis no
+representa un acuerdo del equipo antes de revisar las aportaciones en reunión.

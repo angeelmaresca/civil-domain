@@ -16,12 +16,40 @@ acción. No debe copiar aquí el razonamiento que pertenece al documento concept
 
 ## Entradas
 
+### 2026-09-14 — Consolidación documental de la primera iteración
+
+**Objetivo:** reunir las aportaciones disponibles y facilitar su contraste en
+`develop` sin convertir hipótesis de trabajo en decisiones canónicas.
+
+**Resultado:** se agrupó el enunciado y las fichas de Ángel, Luis y Miguel en
+[`iteration-01/`](iteration-01/ENUNCIADO.md) con nombres homogéneos; se incorporó
+la [síntesis transversal](iteration-01/SINTESIS.md) como `DRAFT`, con vocabulario
+provisional y ejemplos de identidad, procedencia y conciliación entre modelos.
+Se actualizaron los accesos desde el README y el working set. Se comprobó que
+`origin/develop` no aportaba cambios nuevos y se retiró el paquete local
+`offline/`, ya innecesario; no formaba parte de Git.
+
+**Documentos afectados:** `README.md`, `docs/WORKING_SET.md`, este registro y los
+documentos de `docs/iteration-01/` (incluidos los trasladados desde `docs/`).
+
+**Cuestiones abiertas:** revisar la síntesis con el equipo, completar la ficha de
+Alberto, corregir la de Luis y contrastar las hipótesis de correspondencia con
+un intercambio real entre programas. Ninguna propuesta se promueve a `CANONICAL`.
+
+**Validación:** revisión del diff, enlaces locales y ausencia de errores de
+espaciado antes de publicar.
+
+**Commit:** commit de `develop` que contiene esta entrada.
+
+**Siguiente acción:** discusión conjunta del vocabulario mínimo y selección de
+un caso de intercambio físico–analítico para probarlo.
+
 ### 2026-09-14 — Ficha individual de Luis (Zapata)
 
 **Objetivo:** preparar la aportación de Luis a la primera iteración a partir de
 las entrevistas del 11 y 14 de septiembre.
 
-**Resultado:** se redactó la [ficha de zapata](FICHA_ZAPATA.md), incluyendo identidad,
+**Resultado:** se redactó la [ficha de zapata](iteration-01/FICHA_LUIS_ZAPATA.md), incluyendo identidad,
 tipos, geometría, armado, emplazamiento, encepados y elementos profundos separados.
 Se incorporaron métodos de análisis manuales, algorítmicos y de elementos finitos,
 y una propuesta transversal de comprobaciones y validación técnica trazable.

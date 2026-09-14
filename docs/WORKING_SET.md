@@ -21,16 +21,24 @@ acciones y modelos analíticos.
 
 ## Documento activo
 
-[`FIRST_ITERATION.md`](FIRST_ITERATION.md) coordina la primera iteración del equipo,
-su batería común de preguntas y el ejemplo resuelto.
+[`iteration-01/ENUNCIADO.md`](iteration-01/ENUNCIADO.md) coordina la primera iteración
+del equipo, su batería común de preguntas y el ejemplo resuelto.
+[`iteration-01/SINTESIS.md`](iteration-01/SINTESIS.md) es el contraste `DRAFT` de
+las fichas disponibles, no una definición aprobada del dominio.
+
+La carpeta `iteration-01/` reúne artefactos que ya existen para esta ronda:
+enunciado, tres fichas y síntesis. Se crea ahora para que el contraste tenga un
+único lugar; no anticipa carpetas ni decisiones de iteraciones futuras.
 
 ## Alcance de edición actual
 
 | Documento | Uso permitido |
 |---|---|
-| `FIRST_ITERATION.md` | Documento principal: ajustar alcance, preguntas, ejemplos y reparto inicial |
-| `FICHA_ACCIONES_CARGAS.md` | Ficha individual de Miguel (foco "Acciones y cargas"); cada participante edita solo su propia ficha |
-| `FICHA_ZAPATA.md` | Ficha individual de Luis; preparar y corregir el borrador de la entrevista antes de compararlo con el equipo |
+| `iteration-01/ENUNCIADO.md` | Enunciado común, reparto inicial y ejemplo resuelto |
+| `iteration-01/FICHA_ANGEL_COLUMNA.md` | Ficha individual de Ángel; editar solo con él |
+| `iteration-01/FICHA_LUIS_ZAPATA.md` | Ficha individual de Luis; pendiente de su corrección, editar solo con él |
+| `iteration-01/FICHA_MIGUEL_ACCIONES_CARGAS.md` | Ficha individual de Miguel; editar solo con él |
+| `iteration-01/SINTESIS.md` | Contraste transversal `DRAFT`; revisar con el equipo sin promoverlo a definición aprobada |
 | `research/IFC_CORE_CONCEPTS.md` | Referencia didáctica; editar solo si la aplicación de los ejemplos descubre una corrección |
 | `BIM_REFERENCE_MAP.md` | Actualización coordinada únicamente si cambia el frente de investigación |
 | `WORKING_SET.md` | Mantener el estado presente y la siguiente acción |
@@ -47,14 +55,16 @@ recomendaciones explícitas antes de trasladar conceptos al inventario.
 
 ## Siguiente acción
 
-Luis revisa y corrige su [ficha de zapata](FICHA_ZAPATA.md), redactada a partir de
+Luis revisa y corrige su [ficha de zapata](iteration-01/FICHA_LUIS_ZAPATA.md), redactada a partir de
 las entrevistas del 11 y 14 de septiembre, incluida la ampliación sobre encepados,
 métodos de análisis y validación técnica. Sus propuestas siguen en estado `DRAFT`.
 
-Cada participante prepara una primera ficha breve usando el caso común y la batería
-de [`FIRST_ITERATION.md`](FIRST_ITERATION.md). En la siguiente reunión se compararán
-las cuatro lecturas para precisar el foco de cada frente, consolidar preguntas y
-decidir qué conceptos requieren una segunda investigación.
+En la siguiente reunión se contrastan las [tres fichas disponibles y su síntesis](iteration-01/SINTESIS.md)
+para acordar un vocabulario mínimo y elegir un caso real con el que probar la
+correspondencia entre ocurrencia física, modelos de origen y modelos analíticos.
+La ficha de Alberto sobre conexiones todavía no está incorporada; no se presenta
+la síntesis como consenso de los cuatro frentes. La ficha activa de Ángel está
+en `iteration-01/FICHA_ANGEL_COLUMNA.md`; el paquete local `offline/` se retiró.
 
 No se diseñarán todavía tablas, clases o una jerarquía canónica. El resultado buscado
 es un mapa conceptual comparable y una delimitación más precisa del trabajo de

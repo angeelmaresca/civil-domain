@@ -4,7 +4,7 @@
 > **Editable:** sí; ficha individual de preparación para la primera iteración
 > **Document owner:** Miguel
 > **Canonical for:** —
-> **Sources:** [`FIRST_ITERATION.md`](FIRST_ITERATION.md) (foco "Miguel — Acciones y cargas"), batería común de preguntas y conversación de trabajo
+> **Sources:** [`ENUNCIADO.md`](ENUNCIADO.md) (foco "Miguel — Acciones y cargas"), batería común de preguntas y conversación de trabajo
 > **Supersedes:** —
 > **Last reviewed:** 2026-09-11
 
@@ -15,7 +15,7 @@ la primera iteración del equipo. Es una hipótesis `DRAFT`, construida
 pregunta a pregunta sobre un ejemplo concreto (un depósito `EQ-101`); no
 es una definición aprobada del dominio. Se aportará junto con las fichas
 de Alberto (conexiones), Luis (zapata) y Ángel (elemento estructural) en
-la reunión de contraste que describe `FIRST_ITERATION.md`, sección 7.
+la reunión de contraste que describe `ENUNCIADO.md`, sección 7.
 
 ## 1. Mapa conceptual y ejemplo mínimo
 
@@ -123,7 +123,7 @@ Frontera de `EQ-101`:
 propiedad del depósito, la identidad de `EQ-101` cambiaría — o quedaría
 ambigua — cada vez que varía su nivel de llenado. Es el mismo problema que
 el diseño frágil ya identificado para el pedestal (guardar `loadN` como
-campo fijo de la zapata, `FIRST_ITERATION.md` 6.5): mezcla algo estable
+campo fijo de la zapata, `ENUNCIADO.md` 6.5): mezcla algo estable
 (la identidad del objeto) con algo variable (una acción). Mantener el peso
 del líquido fuera de la frontera física permite que `EQ-101` conserve una
 única identidad estable mientras origina acciones distintas (`LC-VACIO`,
@@ -358,6 +358,6 @@ Mezcla en un único campo: el valor de la acción, sin indicar a qué caso
 pertenece (`LC-VACIO` o `LC-LLENO`), sin convenio de signos explícito,
 sin origen registrado (¿por qué 2500 kg?), y sin distinguir si es un dato
 de entrada o ya una combinación. Es el mismo problema de fondo que el
-ejemplo de la zapata (`FIRST_ITERATION.md`, 6.5): convierte una Acción
+ejemplo de la zapata (`ENUNCIADO.md`, 6.5): convierte una Acción
 —con su propia identidad, agrupación y procedencia— en un número suelto
 pegado al objeto físico que la recibe.
