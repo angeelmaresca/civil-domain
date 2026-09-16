@@ -6,7 +6,7 @@
 > **Canonical for:** estado operativo, alcance de edición y siguiente acción  
 > **Sources:** conversación inicial del equipo  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-14
+> **Last reviewed:** 2026-09-16
 
 ## Empieza aquí
 
@@ -54,6 +54,19 @@ pero no son frentes editables durante este hito. La investigación debe terminar
 recomendaciones explícitas antes de trasladar conceptos al inventario.
 
 ## Siguiente acción
+
+Contrastar la [ampliación de Luis sobre esfuerzos y modelos analíticos](iteration-01/FICHA_LUIS_ZAPATA.md#11-esfuerzos-desplazamientos-y-representaciones-analíticas),
+recogida el 16 de septiembre. Quedan pendientes las reglas concretas de summaries
+de desplazamientos y tensiones/presiones; el summary de EsfuerzosPlaca está descrito
+como propuesta confirmada por Luis.
+
+Luis consultará al equipo la [propuesta de organización documental](iteration-01/SINTESIS.md#propuesta-de-organización-documental-pendiente-del-equipo).
+No se abren todavía catálogos nuevos ni se reactivan el inventario o el modelo
+conceptual inicial.
+
+Contrastar con el equipo la [aclaración de Luis sobre acciones y escenarios](iteration-01/FICHA_LUIS_ZAPATA.md#10-aclaración-de-luis-acciones-escenarios-y-summaries),
+incorporada en su ficha tras la entrevista del 15 de septiembre. Incluye envolventes
+y summaries. Es una aportación `DRAFT` y no sustituye la ficha de Miguel.
 
 Luis revisa y corrige su [ficha de zapata](iteration-01/FICHA_LUIS_ZAPATA.md), redactada a partir de
 las entrevistas del 11 y 14 de septiembre, incluida la ampliación sobre encepados,

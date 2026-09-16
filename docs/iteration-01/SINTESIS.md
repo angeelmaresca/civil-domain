@@ -6,7 +6,7 @@
 > **Canonical for:** —
 > **Sources:** [enunciado](ENUNCIADO.md), fichas de [Ángel](FICHA_ANGEL_COLUMNA.md), [Luis](FICHA_LUIS_ZAPATA.md) y [Miguel](FICHA_MIGUEL_ACCIONES_CARGAS.md)
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-14
+> **Last reviewed:** 2026-09-16
 
 ## Alcance de la fusión
 
@@ -22,6 +22,45 @@ Esta síntesis extrae distinciones y tensiones. No define tablas, clases, una
 jerarquía de herencia ni una autoridad universal de datos.
 
 ## Lo que las fichas nos obligan a distinguir
+
+La [aclaración de Luis del 15 de septiembre](FICHA_LUIS_ZAPATA.md#10-aclaración-de-luis-acciones-escenarios-y-summaries)
+es la fuente de su aportación sobre acciones, reacciones, escenarios, matriz,
+envolvente y summaries. Queda para contraste con Miguel y el equipo; no sustituye
+las preguntas abiertas sobre identidad de acción y aplicaciones analíticas.
+
+La [continuación del 16 de septiembre](FICHA_LUIS_ZAPATA.md#11-esfuerzos-desplazamientos-y-representaciones-analíticas)
+recoge esfuerzos, EsfuerzosPlaca, desplazamientos y distintas idealizaciones de
+zapata, con su relación con escenarios y envolventes. Incluye el summary de
+EsfuerzosPlaca confirmado con Luis y señala qué summaries siguen pendientes.
+
+### Propuesta de organización documental pendiente del equipo
+
+En la conversación con Luis se explicó Civil Domain como vocabulario compartido
+más objetos, relaciones, reglas y contexto/procedencia de los datos de ingeniería.
+El glosario es una puerta de entrada al modelo conceptual, no su contenido completo.
+Esto no define todavía tablas, clases ni una entidad por término.
+
+Se propuso organizar progresivamente cuatro documentos:
+
+| Parte propuesta | Contenido previsto |
+|---|---|
+| Vocabulario | Significados breves, sinónimos, ambigüedades y enlaces al detalle. |
+| Objetos del dominio | Identidad, revisiones, límites y naturaleza de los objetos; distinguir candidatos de definiciones acordadas. |
+| Relaciones | Significado de los vínculos entre objetos y su contexto. |
+| Reglas del dominio | Condiciones que deben cumplirse, con ejemplos y fuentes. |
+
+La propuesta conservaría una fuente propietaria por definición, enlaces entre
+documentos y trazabilidad a las fichas de conversación. Se sugirieron identificadores
+estables y una indicación de si cada entrada es propuesta, confirmada en entrevista
+o pendiente de contraste; estas indicaciones de consenso no reemplazarían los
+estados documentales existentes. El inventario previo sería un punto de partida,
+no una lista de entidades aprobadas.
+
+**Estado:** Luis lo consultará con el equipo. No se ha aprobado la reorganización
+ni creado estos catálogos. Las fichas actuales conservan las aportaciones y su
+procedencia; la estructura documental vigente sigue activa.
+
+### Contraste de las fichas
 
 | Distinción transversal | Evidencia en las fichas | Conclusión provisional para interiorizar |
 |---|---|---|

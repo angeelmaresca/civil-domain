@@ -4,9 +4,9 @@
 > **Editable:** sí; ficha individual de Luis para revisión dentro del alcance de `WORKING_SET.md`
 > **Document owner:** Luis
 > **Canonical for:** —
-> **Sources:** [Primera iteración](ENUNCIADO.md), entrevistas con Luis del 2026-09-11 y 2026-09-14
+> **Sources:** [Primera iteración](ENUNCIADO.md), entrevistas con Luis del 2026-09-11, 2026-09-14, 2026-09-15 y 2026-09-16
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-14
+> **Last reviewed:** 2026-09-16
 
 ## Alcance y lectura
 
@@ -355,3 +355,172 @@ concretar el ownership de los elementos profundos fuera de su relación con el
 encepado. No se han definido asociaciones a clasificaciones
 externas ni un catálogo exhaustivo de propiedades. Estos vacíos se mantienen
 visibles para la revisión; no se completan mediante suposiciones.
+
+## 10. Aclaración de Luis: acciones, escenarios y summaries
+
+Fuente: entrevista con Luis del 2026-09-15, a partir del apartado 8 del handoff
+`footings-v2/docs/sources/handoff/FOOTINGS_V2_CHAT_HANDOFF.md` de Footings V2.
+Recoge respuestas confirmadas por Luis; sigue en estado `DRAFT` para contraste del
+equipo. Complementa la [ficha de Miguel](FICHA_MIGUEL_ACCIONES_CARGAS.md).
+
+### Los seis conceptos
+
+| Concepto | Significado confirmado con Luis |
+|---|---|
+| Acción | Actúa sobre un elemento físico. Incluye fuerzas y momentos, con aplicación puntual, lineal o superficial. En un punto se expresa mediante `Fx, Fy, Fz, Mx, My, Mz`. |
+| Reacción | Respuesta que ejerce un elemento físico ante las acciones recibidas; también incluye fuerzas y momentos. |
+| Hipótesis simple | Escenario común del modelo que agrupa acciones y reacciones de distintos elementos y puntos; no se crea una hipótesis por support. |
+| Combinación | Escenario común definido por hipótesis simples y coeficientes. La definición se distingue de los valores obtenidos en cada punto. |
+| Matriz de combinaciones | Conjunto de definiciones: filas por combinación y columnas por hipótesis simple. Solo permite combinar resultados simples cuando la relación es lineal. |
+| Envolvente | Lista común y ordenada de combinaciones completas sobre la que se consulta o comprueba. Cada punto aporta sus valores para esas combinaciones. |
+
+Acción/reacción describe el papel de las magnitudes; hipótesis/combinación, el
+escenario. Ambas pueden estar asociadas a hipótesis simples o combinaciones.
+En la interfaz estructura–cimentación se suelen recibir reacciones estructurales
+y convertirlas en acciones sobre la cimentación multiplicando por `-1`, en el mismo
+punto y ejes, conservando su procedencia.
+
+### Linealidad
+
+En el caso lineal se suman, en cada punto, los resultados simples multiplicados por
+los coeficientes de la combinación. La fila es común a todos los puntos.
+
+Si la relación no es lineal, se aplican conjuntamente las acciones simples con sus
+coeficientes y se analiza ese escenario completo. Luis cita P-delta como ejemplo.
+La combinación se resuelve como caso independiente, pero conserva su identidad de
+combinación y las hipótesis y coeficientes que la definen. No se superponen resultados
+simples para calcularla. Footings puede recibir estos resultados directamente sin
+volver a aplicar la matriz para generarlos.
+
+### Summary y summary advanced
+
+El summary es una propiedad/consulta de una envolvente ligada a un punto de carga:
+un support, un punto de una zapata o un punto de una estructura.
+
+| Consulta | Entradas, cada una con la combinación completa |
+|---|---|
+| Summary | 12: máximo y mínimo de `Fx`, `Fy`, `Fz`, `Mx`, `My` y `Mz`. |
+| Summary advanced | 16: las anteriores más máximo y mínimo de `Mx/Fy` y de `Mz/Fy`. No se utiliza `My/Fy`. |
+
+La misma combinación aparece tantas veces como criterios gobierne: no se eliminan
+duplicados. Ante un empate se selecciona la primera según el orden de la envolvente.
+No se construye un vector ficticio de extremos de distintas combinaciones.
+
+Para los cocientes, `N = Fy`. Si `Fy` es exactamente cero, se usa `0,0001` en la
+misma unidad de fuerza que `Fx` y `Fy`, solo como denominador para resolver la
+singularidad. La combinación original conserva `Fy = 0`. No se ha acordado una
+tolerancia para valores próximos a cero ni una unidad normalizada de intercambio.
+
+Ambos summaries sirven para consulta y comprobación con el conjunto reducido.
+Luis prefiere comprobar todas las combinaciones de la envolvente. La selección
+reducida no sustituye a la envolvente completa y no se presupone que ambas
+comprobaciones den siempre el mismo resultado gobernante.
+
+### Punto y ejes de consulta
+
+Un punto perteneciente a la estructura `PR-005` puede usar los ejes de la estructura.
+En la unión de una viga de hormigón con una metálica, el dimensionamiento de una
+placa embebida requiere expresar las acciones en los ejes locales de esa placa.
+
+Primero se expresan todas las combinaciones en el punto de referencia y ejes de
+consulta; después se seleccionan los extremos. Cambiar los ejes puede cambiar las
+combinaciones seleccionadas. Una misma envolvente `ULS` mantiene la lista común
+`C1, C2, C3...` para muchos puntos, cada uno con sus propios valores. El summary
+depende del punto y de los ejes sin crear otra definición de envolvente.
+La combinación gobernante también puede variar según la comprobación realizada.
+
+### Alcance del acuerdo
+
+La continuación del 16 de septiembre sobre **Esfuerzos**, **EsfuerzosPlaca** y
+desplazamientos se recoge en el apartado 11.
+
+Se aclaran conceptos y consultas, no tablas, campos ni ownership. Quedan para el
+equipo las preguntas de la ficha de Miguel sobre identidad de acción entre estados
+y aplicaciones analíticas, y la política de intercambio de unidades. Esta aportación
+no sustituye las fichas individuales ni implica aprobación canónica del equipo.
+
+## 11. Esfuerzos, desplazamientos y representaciones analíticas
+
+Fuente: continuación de la entrevista con Luis del 2026-09-16. Las distinciones
+siguientes fueron confirmadas en conversación; permanecen `DRAFT` para contraste
+del equipo. Los términos expresan el vocabulario propuesto para Civil Domain.
+
+### 11.1. Modelo y resultados
+
+Nudos, barras y placas son objetos con los que se construye un modelo analítico.
+A partir de las acciones, el análisis obtiene esfuerzos, desplazamientos y
+reacciones, que sirven de base a las comprobaciones. Cada conjunto de resultados
+se asocia a una hipótesis simple o combinación, al análisis y modelo que lo produjo
+y a su lugar de evaluación, con sus ejes y unidades.
+
+Una misma sección de barra, punto de placa o nudo puede tener resultados distintos
+para `H1`, `H2`, `C1`, etc. Estos objetos analíticos se distinguen del elemento físico
+que representan. No todos los métodos requieren una discretización con esos objetos:
+también se mantiene la formulación de sólido rígido descrita más abajo.
+
+### 11.2. Esfuerzos como categoría de resultados internos
+
+Luis confirma usar **Esfuerzos** como categoría general, distinguiendo naturaleza,
+unidades y lugar de evaluación de cada resultado:
+
+| Familia | Significado y componentes |
+|---|---|
+| Resultantes de fuerzas y momentos | Referidas a una sección o zona y expresadas respecto a un punto. En una barra: `Fx, Fy, Fz, Mx, My, Mz`, con unidades de fuerza y momento respectivamente. |
+| Tensiones / presiones | Valores locales de fuerza por superficie; pueden describir una distribución sobre una sección o superficie. |
+| EsfuerzosPlaca | Resultados de una placa analítica por unidad de longitud, expresados en sus ejes locales; ocho componentes según la tabla siguiente. |
+
+| Componentes de EsfuerzosPlaca | Significado | Unidades de ejemplo |
+|---|---|---|
+| `SQX`, `SQY` | Cortantes | kN/m |
+| `SX`, `SY`, `SXY` | Esfuerzos de membrana | kN/m |
+| `Mx`, `My`, `Mxy` | Momentos de placa | kN·m/m |
+
+La repetición inicial de `SXY` en la conversación fue corregida como errata: son
+ocho componentes. Los símbolos anteriores conservan la terminología aportada por
+Luis, sin fijar todavía un formato de intercambio universal.
+
+### 11.3. Desplazamientos nodales
+
+Los resultados de desplazamiento de un nudo incluyen tres traslaciones y tres
+giros, en un sistema de ejes identificado. Se vinculan al escenario y análisis que
+los produjo. Los nudos que actúan como apoyos pueden tener también reacciones.
+
+### 11.4. Una zapata, distintas idealizaciones
+
+Luis describe tres posibilidades, según el propósito del cálculo:
+
+- **Varias placas analíticas:** cada placa tiene sus EsfuerzosPlaca y representa
+  parte de la zapata física.
+- **Una barra:** en el extremo situado en un nudo central se concentra la
+  representación de los esfuerzos del conjunto de la zapata. Ese nudo puede actuar
+  también como apoyo. En la interfaz se relacionan los esfuerzos del extremo,
+  las reacciones del suelo sobre la zapata y las acciones de la zapata sobre el
+  suelo. No son resultados independientes sin relación; su correspondencia exige
+  respetar el punto, los ejes y los convenios de signos. Acción sobre el suelo y
+  reacción sobre la zapata tienen signos opuestos en la misma referencia.
+- **Sólido rígido:** se considera la zapata como un sólido que puede girar respecto
+  a su centro. Según el cálculo se obtienen tensiones/presiones en puntos o
+  resultantes sobre zonas/secciones. Los puntos inferiores en contacto con el
+  terreno son susceptibles de actuar como apoyos, con reacciones del terreno y
+  acciones opuestas sobre este.
+
+No se equipara la zapata física a una única barra, placa o topología obligatoria.
+
+### 11.5. Envolvente y summaries por familia de resultados
+
+La envolvente conserva la misma lista de combinaciones al consultar esfuerzos,
+tensiones, EsfuerzosPlaca o desplazamientos. Cada consulta utiliza los resultados
+correspondientes a su objeto, punto, ejes y análisis.
+
+Luis confirma que las familias tienen **summaries específicos**. Para
+**EsfuerzosPlaca**, el summary tiene **16 entradas**: máximo y mínimo de cada una
+de las ocho componentes. Cada entrada conserva las ocho componentes de la
+combinación seleccionada en el lugar consultado. Se repiten combinaciones si
+gobiernan varios extremos; ante empate se escoge la primera en el orden de la
+envolvente. Estas 16 entradas no son el summary advanced de fuerzas y momentos
+del apartado 10: responden a otros criterios y otras magnitudes.
+
+**Pendiente:** se preguntó si el summary de desplazamientos tiene 12 entradas
+(extremos de tres traslaciones y tres giros), pero Luis todavía no confirmó esa
+regla. También faltan los criterios concretos del summary de tensiones/presiones
+y si existe un advanced específico de EsfuerzosPlaca. No se deducen por analogía.

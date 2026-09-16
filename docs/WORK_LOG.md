@@ -6,7 +6,7 @@
 > **Canonical for:** historial resumido del trabajo realizado  
 > **Sources:** historial Git y documentos enlazados por cada entrada  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-14
+> **Last reviewed:** 2026-09-16
 
 ## Regla de registro
 
@@ -15,6 +15,32 @@ afectados, las cuestiones que permanecen abiertas, los commits y la siguiente
 acción. No debe copiar aquí el razonamiento que pertenece al documento conceptual.
 
 ## Entradas
+
+### 2026-09-16 — Acciones, esfuerzos y consultas de envolventes con Luis
+
+**Objetivo:** recoger las entrevistas del 15 y 16 de septiembre y cerrar el bloque
+documental para publicación en `develop`, a petición de Luis.
+
+**Resultado:** ampliada la ficha de Luis con la distinción de acciones, reacciones,
+hipótesis, combinaciones, matriz y envolventes; reglas de summaries; esfuerzos,
+EsfuerzosPlaca, desplazamientos y representaciones analíticas alternativas de zapata.
+La síntesis enlaza las aportaciones y registra la propuesta de catálogos para
+discusión del equipo. Las aportaciones siguen `DRAFT`.
+
+**Documentos afectados:** `iteration-01/FICHA_LUIS_ZAPATA.md`,
+`iteration-01/SINTESIS.md`, `WORKING_SET.md` y este registro.
+
+**Validación:** revisión del diff, coherencia de componentes y número de entradas,
+enlaces locales y comprobación de espacios con `git diff --check`.
+
+**Cuestiones abiertas:** summaries de desplazamientos y tensiones/presiones,
+eventual advanced de EsfuerzosPlaca, contraste del equipo y organización documental.
+Se mantienen las preguntas previas de identidad de acción e intercambio de unidades.
+
+**Commit:** commit de `develop` que contiene esta entrada.
+
+**Siguiente acción:** Luis consulta al equipo la organización propuesta; continuar
+las preguntas pendientes sin promover documentos ni crear catálogos todavía.
 
 ### 2026-09-14 — Consolidación documental de la primera iteración
 
