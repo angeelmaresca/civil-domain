@@ -6,7 +6,7 @@
 > **Canonical for:** historial resumido del trabajo realizado  
 > **Sources:** historial Git y documentos enlazados por cada entrada  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-16
+> **Last reviewed:** 2026-09-18
 
 ## Regla de registro
 
@@ -15,6 +15,49 @@ afectados, las cuestiones que permanecen abiertas, los commits y la siguiente
 acción. No debe copiar aquí el razonamiento que pertenece al documento conceptual.
 
 ## Entradas
+
+### 2026-09-18 — Organización documental y apertura de la segunda iteración
+
+**Objetivo:** aplicar la organización documental aceptada por el equipo, formular
+la primera frontera de `OcurrenciaDeDiseño` y convertir sus dudas en una investigación
+estructurada antes de diseñar tablas o clases.
+
+**Resultado:** se creó `domain-objects/` con un archivo propietario por objeto del
+dominio y se inició con la definición `DRAFT` de `OcurrenciaDeDiseño`. Se separaron
+el índice de vocabulario, la semántica de relaciones y las reglas candidatas. La
+síntesis registra que el equipo acepta esta organización, sin convertir su contenido
+en canónico. También se incorporó el material didáctico offline ya preparado.
+
+Se abrió [`iteration-02/`](iteration-02/ENUNCIADO.md) con un artefacto concreto: una
+memoria razonada de las conclusiones provisionales, un contraste detallado con
+`IfcObject`, `IfcProduct`, tipos, assemblies, sistemas, estructura espacial,
+relaciones y modelo analítico, y una agenda de cuestiones para revisar si la
+definición de ocurrencia necesita ajustes. No se solicita una ficha como entrega.
+La revisión de carpetas concluye que no se justifican todavía directorios adicionales
+para relaciones, reglas, decisiones, fuentes o esquemas.
+
+**Documentos afectados:** `README.md`, `docs/WORKING_SET.md`,
+`docs/iteration-01/SINTESIS.md`, `docs/iteration-02/ENUNCIADO.md`,
+`docs/domain-objects/DESIGN_OCCURRENCE.md`, `docs/VOCABULARY.md`,
+`docs/RELATIONSHIPS.md`, `docs/RULES.md`, los tres documentos de `docs/study/` y
+este registro.
+
+**Validación:** revisión de cabeceras documentales, enlaces Markdown locales,
+estructura de carpetas, estado Git y espacios con `git diff --check`. No se encontró
+una herramienta local configurada para regenerar `README.pdf`; la copia derivada
+queda pendiente y no se modificó.
+
+**Cuestiones abiertas:** decidir si `ST-01` posee identidad como conjunto físico,
+qué partes requieren lifecycle propio, qué cambios conservan identidad y qué
+autoridad decide estados, sustituciones, divisiones, fusiones y bajas. Sigue
+pendiente contrastar las ampliaciones de Luis sobre resultados y summaries.
+
+**Commit:** commit de `develop` que contiene esta entrada; publicación autorizada
+por el equipo mediante «actualiza y sube los cambios».
+
+**Siguiente acción:** revisar en sesión las diferencias deliberadas y accidentales
+respecto de IFC; utilizar `ST-01` y los contraejemplos solo cuando ayuden a corregir
+o sostener la definición `DRAFT` de `OcurrenciaDeDiseño`.
 
 ### 2026-09-16 — Acciones, esfuerzos y consultas de envolventes con Luis
 

@@ -13,10 +13,11 @@ nos importa más separar bien los conceptos que cerrar rápidamente tablas o cla
 
 Estamos en una fase de **investigación y descubrimiento de conceptos**.
 
-Antes de definir entidades propias estudiaremos cómo BIM, los estándares
+Antes de formalizar un esquema ejecutable estudiamos cómo BIM, los estándares
 estructurales y los modelos de información de plantas industriales resuelven
 problemas similares. IFC es la primera referencia, pero no será nuestro modelo ni
-una autoridad automática.
+una autoridad automática. Las primeras entidades conceptuales se documentan como
+hipótesis contrastables, sin convertirlas todavía en tablas o clases.
 
 Buscamos principalmente:
 
@@ -111,10 +112,22 @@ estables y casos reales compatibles en ambos proyectos.
 
 - [WORKING_SET.md](docs/WORKING_SET.md): estado actual, único frente editable y
   siguiente acción. Es la puerta de entrada para trabajar.
+- [Segunda iteración](docs/iteration-02/ENUNCIADO.md): investigación activa sobre
+  identidad, estados y la frontera entre estructura física, sistema, espacio, tipo
+  y modelo analítico.
 - [Primera iteración](docs/iteration-01/ENUNCIADO.md): batería de preguntas, reparto
-  inicial y ejemplo resuelto.
+  inicial y ejemplo resuelto; se conserva como evidencia de la ronda anterior.
 - [Síntesis de la primera iteración](docs/iteration-01/SINTESIS.md): lectura conjunta
   de las fichas disponibles y cuestiones para la reunión; sigue en borrador.
+- [Vocabulario](docs/VOCABULARY.md): índice breve que enlaza cada término con su
+  fuente propietaria.
+- [Ocurrencia de diseño](docs/domain-objects/DESIGN_OCCURRENCE.md): primera entidad
+  conceptual en contraste y criterio para distinguir objetos físicos, sistemas,
+  espacios y modelos analíticos.
+- [Relaciones](docs/RELATIONSHIPS.md): semántica de composición, pertenencia,
+  contención, conexión y correspondencia.
+- [Reglas](docs/RULES.md): invariantes conceptuales candidatos antes del diseño de
+  persistencia.
 - [IFC_CORE_CONCEPTS.md](docs/research/IFC_CORE_CONCEPTS.md): primera explicación
   didáctica y preguntas para el equipo.
 - [BIM_REFERENCE_MAP.md](docs/BIM_REFERENCE_MAP.md): mapa de investigaciones,
@@ -139,3 +152,17 @@ Para lectura o distribución sin herramientas adicionales:
 
 Los archivos Markdown son las fuentes editables. Los PDF son copias generadas y
 deben regenerarse cuando cambie su documento de origen.
+
+## Material de estudio offline
+
+Para estudiar los conceptos actuales sin recorrer todo el repositorio:
+
+- [Guía de estudio](docs/study/STUDY_GUIDE.md): explicación progresiva de las
+  separaciones conceptuales de la primera iteración.
+- [Cuaderno de ejercicios](docs/study/STUDY_WORKBOOK.md): casos para resolver sin
+  consultar las fuentes.
+- [Respuestas razonadas](docs/study/STUDY_ANSWERS.md): contraste y enlaces a los
+  documentos propietarios.
+
+Este material es didáctico y derivado. No representa un modelo canónico ni sustituye
+la revisión conjunta de las fichas del equipo.

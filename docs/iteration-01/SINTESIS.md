@@ -6,7 +6,7 @@
 > **Canonical for:** —
 > **Sources:** [enunciado](ENUNCIADO.md), fichas de [Ángel](FICHA_ANGEL_COLUMNA.md), [Luis](FICHA_LUIS_ZAPATA.md) y [Miguel](FICHA_MIGUEL_ACCIONES_CARGAS.md)
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-16
+> **Last reviewed:** 2026-09-18
 
 ## Alcance de la fusión
 
@@ -33,21 +33,23 @@ recoge esfuerzos, EsfuerzosPlaca, desplazamientos y distintas idealizaciones de
 zapata, con su relación con escenarios y envolventes. Incluye el summary de
 EsfuerzosPlaca confirmado con Luis y señala qué summaries siguen pendientes.
 
-### Propuesta de organización documental pendiente del equipo
+### Organización documental aceptada por el equipo
 
 En la conversación con Luis se explicó Civil Domain como vocabulario compartido
 más objetos, relaciones, reglas y contexto/procedencia de los datos de ingeniería.
 El glosario es una puerta de entrada al modelo conceptual, no su contenido completo.
 Esto no define todavía tablas, clases ni una entidad por término.
 
-Se propuso organizar progresivamente cuatro documentos:
+El equipo acepta organizar progresivamente el conocimiento en cuatro partes, con
+un matiz: los objetos del dominio no se reúnen en un único documento, sino en una
+carpeta con un archivo propietario por objeto.
 
-| Parte propuesta | Contenido previsto |
+| Parte acordada | Contenido previsto |
 |---|---|
-| Vocabulario | Significados breves, sinónimos, ambigüedades y enlaces al detalle. |
-| Objetos del dominio | Identidad, revisiones, límites y naturaleza de los objetos; distinguir candidatos de definiciones acordadas. |
-| Relaciones | Significado de los vínculos entre objetos y su contexto. |
-| Reglas del dominio | Condiciones que deben cumplirse, con ejemplos y fuentes. |
+| [`VOCABULARY.md`](../VOCABULARY.md) | Significados breves, sinónimos, ambigüedades y enlaces a la fuente propietaria. |
+| [`domain-objects/`](../domain-objects/) | Un archivo por objeto del dominio: identidad, revisiones, límites y naturaleza; distingue candidatos de definiciones acordadas. |
+| [`RELATIONSHIPS.md`](../RELATIONSHIPS.md) | Significado de los vínculos entre objetos y su contexto, separado del vocabulario. |
+| [`RULES.md`](../RULES.md) | Condiciones e invariantes que deben cumplirse, con ejemplos y fuentes. |
 
 La propuesta conservaría una fuente propietaria por definición, enlaces entre
 documentos y trazabilidad a las fichas de conversación. Se sugirieron identificadores
@@ -56,9 +58,11 @@ o pendiente de contraste; estas indicaciones de consenso no reemplazarían los
 estados documentales existentes. El inventario previo sería un punto de partida,
 no una lista de entidades aprobadas.
 
-**Estado:** Luis lo consultará con el equipo. No se ha aprobado la reorganización
-ni creado estos catálogos. Las fichas actuales conservan las aportaciones y su
-procedencia; la estructura documental vigente sigue activa.
+**Estado:** organización aprobada por decisión humana el 18 de septiembre de 2026.
+La aprobación afecta a la estructura documental, no aprueba automáticamente el
+contenido conceptual. Los documentos nuevos nacen en estado `DRAFT`; las fichas
+conservan las aportaciones y su procedencia. Las carpetas y archivos solo se crean
+cuando exista contenido concreto que lo justifique.
 
 ### Contraste de las fichas
 
