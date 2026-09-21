@@ -6,7 +6,7 @@
 > **Canonical for:** historial resumido del trabajo realizado  
 > **Sources:** historial Git y documentos enlazados por cada entrada  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-18
+> **Last reviewed:** 2026-09-21
 
 ## Regla de registro
 
@@ -15,6 +15,43 @@ afectados, las cuestiones que permanecen abiertas, los commits y la siguiente
 acción. No debe copiar aquí el razonamiento que pertenece al documento conceptual.
 
 ## Entradas
+
+### 2026-09-21 — Notas de Miguel para la sesión de iteration-02
+
+**Objetivo:** preparar conceptos y preguntas de apoyo para la sesión de
+`iteration-02`, centrados en dos hilos donde Miguel ya tenía evidencia previa:
+tipo vs. estado de diseño, y correspondencia físico–analítica.
+
+**Resultado:**
+
+- se redactó [`NOTAS_TIPO_ESTADO_DISENO.md`](iteration-02/NOTAS_TIPO_ESTADO_DISENO.md):
+  separación Ocurrencia/Estado/Tipo, mecánica de tipado (declaración del tipo,
+  relación `está tipado por`, herencia con override, retipado vía nuevo
+  estado), evidencia cruzada con la zapata de Luis, y una pregunta abierta con
+  ejemplo para debatir (perfil `HEB 300`: ¿tipo intencional, clasificación, o
+  ambos?);
+- se redactó [`NOTAS_CORRESPONDENCIA_FISICO_ANALITICA.md`](iteration-02/NOTAS_CORRESPONDENCIA_FISICO_ANALITICA.md):
+  las cuatro cardinalidades físico–analíticas (1:1, 1:N, N:1, N:M) con
+  ejemplos del caso común, el matiz que las distingue de la correspondencia
+  acción–analítico ya vista en la ficha de Miguel, y una pregunta abierta
+  sobre vigencia de la correspondencia cuando cambia el estado físico;
+- ambos documentos quedan enlazados entre sí y se incorporaron al alcance
+  editable de `WORKING_SET.md`. Son apoyo personal, `iteration-02/ENUNCIADO.md`
+  no exige ficha.
+
+**Documentos afectados:** `docs/iteration-02/NOTAS_TIPO_ESTADO_DISENO.md`
+(nuevo), `docs/iteration-02/NOTAS_CORRESPONDENCIA_FISICO_ANALITICA.md`
+(nuevo), `docs/WORKING_SET.md`.
+
+**Cuestiones abiertas:** las preguntas de debate recogidas en ambos
+documentos (tipo vs. clasificación del perfil `HEB 300`; revisión propia del
+tipo cuando cambia su definición; vigencia automática o re-evaluación
+explícita de una correspondencia físico–analítica tras un cambio de estado).
+
+**Commit:** commit de la rama `develop` que contiene esta entrada.
+
+**Siguiente acción:** llevar ambos documentos a la sesión conjunta de
+`iteration-02` y contrastar sus preguntas con el resto del equipo.
 
 ### 2026-09-18 — Organización documental y apertura de la segunda iteración
 

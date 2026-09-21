@@ -6,7 +6,7 @@
 > **Canonical for:** estado operativo, alcance de edición y siguiente acción  
 > **Sources:** conversación inicial del equipo  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-18
+> **Last reviewed:** 2026-09-21
 
 ## Empieza aquí
 
@@ -37,6 +37,8 @@ ya no coordinan el frente activo.
 | Documento | Uso permitido |
 |---|---|
 | `iteration-02/ENUNCIADO.md` | Memoria razonada, comparación con IFC y agenda opcional de la segunda iteración |
+| `iteration-02/NOTAS_TIPO_ESTADO_DISENO.md` | Notas personales de Miguel (tipo vs. estado de diseño); apoyo para la sesión, no ficha exigida |
+| `iteration-02/NOTAS_CORRESPONDENCIA_FISICO_ANALITICA.md` | Notas personales de Miguel (correspondencia físico–analítica); apoyo para la sesión, no ficha exigida |
 | `iteration-01/` | Evidencia de consulta; las fichas individuales solo se corrigen con sus autores |
 | `iteration-01/SINTESIS.md` | Trazabilidad de la primera iteración y organización documental acordada |
 | `VOCABULARY.md` | Índice breve de términos acordados o candidatos; enlaza a su fuente propietaria |
