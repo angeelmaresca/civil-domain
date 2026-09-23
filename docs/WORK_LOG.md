@@ -6,7 +6,7 @@
 > **Canonical for:** historial resumido del trabajo realizado  
 > **Sources:** historial Git y documentos enlazados por cada entrada  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-21
+> **Last reviewed:** 2026-09-23
 
 ## Regla de registro
 
@@ -262,3 +262,31 @@ ampliar el alcance de un apoyo individual al reparto entre varios apoyos).
 
 **Siguiente acción:** contrastar esta ficha con las de Alberto, Luis y
 Ángel en la próxima reunión, según `FIRST_ITERATION.md` sección 7.
+
+### 2026-09-23 — Resumen de entidades y cierre de conjuntos y versiones
+
+**Objetivo:** reunir entidades y propiedades documentadas y conservar la conversación
+sobre modularización, identidad, versionado y dependencias de cargas.
+
+**Resultado:** se incorpora `ENTITY_SUMMARY.md`, preparado el 22 de septiembre,
+como resumen derivado. La sesión del 23 se registra en `iteration-02/ENUNCIADO.md`,
+coordinada con ocurrencia, vocabulario, relaciones y reglas. Se distingue versión de
+diseño de revisión documental; se recoge el versionado completo de conjuntos y la
+necesidad de referencias y aceptaciones entre versiones de proveedores y receptores.
+Todo el contenido conceptual permanece `DRAFT`. No se modifican fichas individuales,
+inventario ni modelo conceptual de consulta.
+
+**Documentos afectados:** `ENTITY_SUMMARY.md`, `iteration-02/ENUNCIADO.md`,
+`domain-objects/DESIGN_OCCURRENCE.md`, `VOCABULARY.md`, `RELATIONSHIPS.md`, `RULES.md`,
+`WORKING_SET.md` y este registro.
+
+**Pendientes:** inclusión de cimentación en módulo (reservada al equipo), cimentación
+compartida (sin respuesta), autoridad de continuidad, aceptación sin cambios y estado
+de piezas dentro de versiones del conjunto.
+
+**Validación:** revisión de diff y enlaces locales; sin cambios ejecutables.
+
+**Commit:** commit de cierre de `develop` que contiene esta entrada.
+
+**Siguiente acción:** contrastar los pendientes con el equipo antes de aprobar las
+propuestas conceptuales.

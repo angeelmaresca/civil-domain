@@ -6,7 +6,7 @@
 > **Canonical for:** —
 > **Sources:** [síntesis de la primera iteración](iteration-01/SINTESIS.md), [ocurrencia de diseño](domain-objects/DESIGN_OCCURRENCE.md), fichas de la primera iteración y [estudio IFC](research/IFC_CORE_CONCEPTS.md)
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-18
+> **Last reviewed:** 2026-09-23
 
 ## Propósito
 
@@ -96,3 +96,18 @@ semántica tratándola como una referencia desnuda.
 
 La prueba se considera fallida si todas las afirmaciones solo pueden expresarse con
 `parent`, `contains` o `relatedTo`.
+
+## Dependencias de cargas entre versiones
+
+Fuente: [sesión del 23 de septiembre](iteration-02/ENUNCIADO.md#11-sesión-del-23-de-septiembre-conjuntos-y-versiones),
+aportación `DRAFT`. La ruta física de transmisión no expresa por sí sola qué
+versión suministró las cargas usadas por el receptor.
+
+| Relación candidata | Participantes | Pendiente |
+|---|---|---|
+| Se basa en cargas de | Versión receptora y versión concreta proveedora. | Referencia precisa al paquete de cargas/análisis y multiplicidad de proveedores. |
+| Se acepta sin modificación frente a | Versión receptora conservada y nueva versión proveedora evaluada. | Registro, autoridad y evidencia; distinguir base utilizada de compatibilidad aceptada posteriormente. |
+
+PR-05 conserva composición con módulos e incluye cimentaciones según el caso
+aportado; no se fija si cada módulo incluye su cimentación. Pertenecer a PR-05
+no obliga a sincronizar versiones ni a crear ya una configuración global versionada.

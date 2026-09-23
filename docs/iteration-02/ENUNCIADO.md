@@ -6,7 +6,7 @@
 > **Canonical for:** —
 > **Sources:** [`OcurrenciaDeDiseño`](../domain-objects/DESIGN_OCCURRENCE.md), [síntesis de la primera iteración](../iteration-01/SINTESIS.md), [estudio IFC](../research/IFC_CORE_CONCEPTS.md), documentación oficial IFC 4.3.2.0 enlazada en este documento y conversación del equipo del 2026-09-18
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-18
+> **Last reviewed:** 2026-09-23
 
 ## 1. Propósito de esta iteración
 
@@ -357,3 +357,96 @@ No se espera una ficha. Se busca una revisión conjunta que deje explícito:
 
 Mientras no exista ese contraste, todas las conclusiones conceptuales permanecen
 `DRAFT`.
+
+## 11. Sesión del 23 de septiembre: conjuntos y versiones
+
+**Fuente:** conversación de trabajo con Luis. Sus respuestas se conservan como
+aportación `DRAFT` para contraste, no como aprobación canónica del equipo.
+
+### Identidad, alcance y códigos
+
+- ST-01 conserva identidad aunque se cambien o sustituyan componentes. Habitualmente
+  designa solo la estructura metálica; su cimentación puede llamarse FDN-ST-01.
+  Tiene ubicación y función resistente, generalmente soportar tuberías y transmitir
+  cargas a cimentación; esto no obliga a crear tres entidades distintas.
+- Los equipos sobre estructuras tienen TAG propios y la estructura no hereda el
+  del equipo. Para un equipo apoyado a suelo aparece, por ejemplo, FDN-V-005 como
+  cimentación de V-005. Son prácticas de denominación, no reglas de identidad.
+- El TAG suele llevar prefijo de unidad, como 210-ST-01. La unidad puede delimitar
+  zona o proceso; en una zona pueden coexistir TAG de distintas unidades.
+- Piping define módulos como PR-05-M03 y puede cambiar sus alineaciones durante el
+  diseño. Si un pórtico pasa de M03 a M02, los módulos pueden conservar identidad.
+  Si el cambio hace desaparecer un módulo, se elimina y puede sustituirse por otro.
+  Los TAG se reutilizan. La magnitud del cambio orienta el juicio; no se fijó umbral
+  ni responsable de decidir continuidad.
+- Luis no da por resuelta la identidad del pórtico y sus piezas trasladadas: en
+  STAAD puede necesitar eliminar y crear objetos, cargas y parámetros de diseño de
+  acero; prevé algo similar en generación automática de maqueta. Para este caso
+  **basta conservar versiones completas anteriores de los modelos**, sin vínculo
+  histórico pieza a pieza. No se establece que toda recreación analítica deba crear
+  obligatoriamente una nueva identidad física.
+
+### Pipe rack y modularización
+
+En oferta o FEED, PR-05 puede ser continuo. Al modularizarse, **PR-05 sigue siendo
+el mismo objeto de proyecto y los módulos pasan a formar parte de él**. Como
+conjunto, PR-05 incluye sus cimentaciones. Esto no amplía automáticamente el alcance
+habitual de ST-01 ni determina el alcance de cada módulo.
+
+Los módulos y sus cimentaciones pueden llevar versiones independientes. Actualmente
+no se necesita identificar una configuración global como «M01 v03, M02 v07, M03
+v02»; podría interesar en el futuro. Sí se prevén consultas de cantidades o ratios
+del PR-05, por ejemplo m³ o kg de acero por volumen. Magnitudes, denominadores y
+reglas de agregación no se han definido todavía.
+
+### Versiones y dependencias de cargas
+
+Luis precisa que **versión** describe los estados sucesivos del diseño. Reserva
+**revisión documental** para emisiones oficiales al cliente, relacionadas con
+estados como IFR o IFC. Las respuestas previas utilizaban ambas palabras
+indistintamente. Aquí IFC como estado de emisión no significa formato de intercambio.
+
+Se versiona el conjunto completo de estructura o cimentación, no cada columna,
+viga o zapata independientemente. Sus interacciones y el plano o memoria del conjunto
+motivan este criterio. Aunque las zapatas no cambien geométricamente, pueden responder
+a una nueva versión de cargas y pertenecer a una nueva versión del conjunto.
+
+Estructura y cimentación tienen ciclos independientes. Un cambio de estructura
+normalmente afecta a cimentación, pero puede aceptarse sin modificarla si el impacto
+es pequeño. Un descentramiento de zapata por una tubería o la incorporación de SPSs
+son ejemplos aportados de cambios de cimentación que no obligan a cambiar estructura.
+No se desarrolló el significado de SPSs ni se afirma que cualquier cambio de
+cimentación carezca de impacto estructural.
+
+**Práctica actual:** la aceptación sin cambio de cimentación no suele registrarse.
+**Necesidad expresada por Luis:** debe registrarse y cada receptor debe referirse a
+la versión concreta que proporciona sus cargas. Cimentación v05 puede estar referida
+o aceptada frente a estructura v06. Esto se extiende a todos los elementos receptores.
+
+El diseño estaría completo si sus últimas versiones tienen resueltas esas referencias,
+por actualización o aceptación sin cambios. Equipo v02, estructura ST-04 v05 y
+cimentación v06 pueden ser coherentes: no se exige igualar números. Esta condición
+de dependencias no sustituye las comprobaciones ni la aprobación técnica.
+
+**Propuesta del asistente por concretar:** distinguir la versión efectivamente
+utilizada para obtener cargas de la aceptación posterior frente a otra versión,
+conservando ambas referencias. No se decidió dónde vive esa aceptación, sus datos
+mínimos, su autoridad ni si crea una versión o un registro separado.
+
+### Pendientes para el equipo
+
+1. **Aplazado expresamente por Luis:** si PR-05-M03 incluye su cimentación o identifica
+   solo estructura metálica y la cimentación es otro conjunto dentro de PR-05.
+2. **Pregunta sin responder:** si una cimentación puede apoyar varios módulos o
+   estructuras y cómo se identifica y organiza en ese caso.
+3. Quién decide continuidad o sustitución al remodular y con qué criterio.
+4. Cómo representar estados de piezas dentro de versiones del conjunto sin imponer
+   ciclos de versiones independientes por pieza.
+5. Cómo registrar aceptación sin cambios y conservar las referencias de cargas;
+   relación entre versiones técnicas y emisiones documentales.
+6. Cuándo será necesaria una configuración global y cómo agregar cantidades sin
+   mezclar versiones ni contar dos veces componentes compartidos.
+
+Consecuencias candidatas en [ocurrencia](../domain-objects/DESIGN_OCCURRENCE.md),
+[relaciones](../RELATIONSHIPS.md) y [reglas](../RULES.md). Esta sección es la evidencia
+propietaria de la conversación; no se crean nuevas familias documentales.

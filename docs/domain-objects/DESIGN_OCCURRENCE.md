@@ -6,7 +6,7 @@
 > **Canonical for:** —
 > **Sources:** [síntesis de la primera iteración](../iteration-01/SINTESIS.md), fichas de [Ángel](../iteration-01/FICHA_ANGEL_COLUMNA.md), [Luis](../iteration-01/FICHA_LUIS_ZAPATA.md) y [Miguel](../iteration-01/FICHA_MIGUEL_ACCIONES_CARGAS.md), [estudio IFC](../research/IFC_CORE_CONCEPTS.md) y decisión del equipo del 2026-09-18
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-18
+> **Last reviewed:** 2026-09-23
 
 ## Decisión de partida
 
@@ -263,3 +263,21 @@ El siguiente contraste recomendado es modelar `ST-01` con `C-101`, `B-101` y
 `F-101` en dos variantes: como conjunto físico con identidad y como sistema funcional.
 Si el equipo obtiene las mismas respuestas en ambas, una entidad sobra; si cambian
 lifecycle, cardinalidades o responsabilidades, deben permanecer separadas.
+
+## Contraste de conjuntos y versiones completas
+
+La [sesión del 23 de septiembre](../iteration-02/ENUNCIADO.md#11-sesión-del-23-de-septiembre-conjuntos-y-versiones)
+aporta el caso PR-05: conserva identidad al pasar de continuo a modular e incluye
+cimentaciones. ST-01 suele designar solo estructura metálica. El alcance del módulo
+respecto a cimentación queda expresamente para debate. Son aportaciones `DRAFT`.
+
+El esquema ocurrencia → estados no exige un ciclo independiente de versiones por
+pieza: Luis propone versionar estructura y cimentación como conjuntos completos.
+Una columna puede tener otra descripción en una versión del conjunto sin contador
+propio. La representación de ese estado contextualizado sigue abierta.
+
+En la remodularización descrita basta conservar modelos completos anteriores, sin
+correspondencia histórica entre cada pieza eliminada y recreada. Esto limita la
+trazabilidad requerida en ese caso, no equipara el objeto analítico al físico ni
+decide automáticamente su continuidad. La relación de sustitución sigue disponible
+cuando aporte valor; no se exige pieza a pieza en ese escenario.

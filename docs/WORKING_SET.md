@@ -6,7 +6,7 @@
 > **Canonical for:** estado operativo, alcance de edición y siguiente acción  
 > **Sources:** conversación inicial del equipo  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-21
+> **Last reviewed:** 2026-09-23
 
 ## Empieza aquí
 
@@ -42,6 +42,7 @@ ya no coordinan el frente activo.
 | `iteration-01/` | Evidencia de consulta; las fichas individuales solo se corrigen con sus autores |
 | `iteration-01/SINTESIS.md` | Trazabilidad de la primera iteración y organización documental acordada |
 | `VOCABULARY.md` | Índice breve de términos acordados o candidatos; enlaza a su fuente propietaria |
+| `ENTITY_SUMMARY.md` | Resumen derivado solicitado de entidades y conceptos candidatos, descripciones, propiedades mencionadas y pendientes; no sustituye sus fuentes propietarias |
 | `domain-objects/DESIGN_OCCURRENCE.md` | Primera definición conceptual `DRAFT` de una ocurrencia de diseño y de su frontera |
 | `RELATIONSHIPS.md` | Vocabulario y semántica `DRAFT` de relaciones entre objetos; separado del vocabulario general |
 | `RULES.md` | Reglas e invariantes conceptuales candidatos; no constituye todavía un esquema ejecutable |
@@ -79,6 +80,14 @@ relaciones, reglas, decisiones, fuentes o esquemas: el volumen actual no las
 justifica y `schemas/` sería prematuro antes de cerrar el modelo conceptual.
 
 ## Siguiente acción
+
+Bloque del 23 de septiembre cerrado: [evidencia de la conversación](iteration-02/ENUNCIADO.md#11-sesión-del-23-de-septiembre-conjuntos-y-versiones).
+Se coordinan resumen de entidades, ocurrencia, vocabulario, relaciones y reglas;
+el contenido conceptual continúa en `DRAFT`.
+
+Prioridad: debatir con el equipo si el módulo incluye cimentación, aplazado
+expresamente. Sigue sin respuesta el caso de cimentación compartida. Después,
+precisar aceptación sin cambios entre versiones y estados de piezas en conjuntos.
 
 Revisar conjuntamente la reflexión de
 [`iteration-02/ENUNCIADO.md`](iteration-02/ENUNCIADO.md), en especial las diferencias

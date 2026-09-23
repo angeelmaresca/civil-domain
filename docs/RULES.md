@@ -6,7 +6,7 @@
 > **Canonical for:** —
 > **Sources:** [síntesis de la primera iteración](iteration-01/SINTESIS.md), [ocurrencia de diseño](domain-objects/DESIGN_OCCURRENCE.md) y fichas de la primera iteración
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-18
+> **Last reviewed:** 2026-09-23
 
 ## Alcance
 
@@ -47,6 +47,28 @@ contrastarse con casos reales.
 14. La correspondencia físico–analítica conserva cardinalidad, propósito y evidencia.
 15. La validación técnica se refiere a estados, entradas, análisis y evidencias
     identificados; no es una propiedad eterna de la ocurrencia.
+
+## Versiones de conjuntos y cargas — propuesta para contraste
+
+Fuente: [sesión del 23 de septiembre](iteration-02/ENUNCIADO.md#11-sesión-del-23-de-septiembre-conjuntos-y-versiones).
+Reglas `DRAFT` para los casos tratados, pendientes del equipo.
+
+16. Versión de diseño y revisión documental de emisión son conceptos distintos;
+    no se presupone correspondencia uno a uno.
+17. Estructura y cimentación se versionan como conjuntos completos; sus piezas se
+    describen dentro de esa versión sin exigir ciclos independientes por pieza.
+18. Los módulos, y estructura frente a cimentación, pueden versionarse de forma
+    independiente. Un cambio requiere evaluar dependencias, no incrementar todos
+    los números de versión automáticamente.
+19. Cada receptor de cargas debe identificar la versión concreta proveedora usada
+    como base. La aceptación sin cambios frente a una nueva versión debe quedar
+    explícita; el mecanismo y la autoridad están por definir.
+20. El cierre exige resolver dependencias por actualización o aceptación sin cambios.
+    Igualar números no prueba coherencia ni sustituye validación técnica.
+21. En la remodularización descrita bastan modelos completos históricos sin vínculo
+    pieza a pieza. No extender esta simplificación a todos los casos.
+22. Reutilizar TAG no equivale a reutilizar identidad interna; decidir continuidad
+    del módulo es distinto de conservar su código.
 
 ## Criterio de madurez
 
