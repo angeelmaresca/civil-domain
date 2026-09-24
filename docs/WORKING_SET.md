@@ -6,7 +6,7 @@
 > **Canonical for:** estado operativo, alcance de edición y siguiente acción  
 > **Sources:** conversación inicial del equipo  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-24
+> **Last reviewed:** 2026-09-24 (actualizado de nuevo el mismo día con la apertura de `iteration-04/`)
 
 ## Empieza aquí
 
@@ -40,6 +40,8 @@ ya no coordinan el frente activo.
 | `iteration-02/NOTAS_TIPO_ESTADO_DISENO.md` | Notas personales de Miguel (tipo vs. estado de diseño); apoyo para la sesión, no ficha exigida |
 | `iteration-02/NOTAS_CORRESPONDENCIA_FISICO_ANALITICA.md` | Notas personales de Miguel (correspondencia físico–analítica); apoyo para la sesión, no ficha exigida |
 | `iteration-03/NOTAS_REVISION_VS_RECALCULO.md` | Nota personal de Miguel sobre cuándo cambia un `EstadoDeDiseño` frente a cuándo exige recálculo; primer artefacto de `iteration-03/` |
+| `iteration-04/ENUNCIADO.md` | Evidencia de la sesión sobre ocurrencia, representaciones, estado derivado y discrepancias; primer artefacto de `iteration-04/` |
+| `iteration-04/ANALISIS_AGENTE.md` | Análisis derivado del agente sobre esa sesión; distingue acuerdos, hipótesis, alternativas, recomendaciones y decisiones pendientes |
 | `iteration-01/` | Evidencia de consulta; las fichas individuales solo se corrigen con sus autores |
 | `iteration-01/SINTESIS.md` | Trazabilidad de la primera iteración y organización documental acordada |
 | `VOCABULARY.md` | Índice breve de términos acordados o candidatos; enlaza a su fuente propietaria |
@@ -88,6 +90,14 @@ a cuándo exige recálculo— que se mantiene deliberadamente separado de las
 notas de `iteration-02` para no mezclar dos bloques de investigación
 distintos. `iteration-02` sigue siendo el frente activo del equipo; abrir
 esta carpeta no la cierra ni la sustituye.
+
+La carpeta `iteration-04/` se abre por decisión explícita de Miguel para
+recoger una nueva sesión de trabajo (ocurrencia, representaciones, estado de
+diseño reformulado como posible vista derivada, discrepancias, entorno común,
+elementos secundarios, transferencia entre disciplinas, significados de
+"tipo" y catálogos) junto con el análisis solicitado al agente. Ninguna de las
+carpetas de iteración anteriores queda cerrada por esto: `iteration-02` sigue
+siendo el frente activo formal del equipo, e `iteration-03` sigue abierta.
 
 ## Siguiente acción
 

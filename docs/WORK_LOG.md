@@ -16,6 +16,48 @@ acción. No debe copiar aquí el razonamiento que pertenece al documento concept
 
 ## Entradas
 
+### 2026-09-24 — Apertura de iteration-04: ocurrencia, representaciones y discrepancias
+
+**Objetivo:** capturar una nueva sesión de trabajo aportada por Miguel
+(ocurrencia, representaciones múltiples, reformulación de `EstadoDeDiseño`
+como posible vista derivada, discrepancias, entorno común, elementos
+secundarios, transferencia entre disciplinas, cinco significados de "tipo" y
+catálogos) y encargar al agente un análisis explícito de próximos pasos,
+riesgos y correspondencias con el resto del proyecto.
+
+**Resultado:** se abre `iteration-04/` con dos artefactos:
+[`ENUNCIADO.md`](iteration-04/ENUNCIADO.md), evidencia fiel de la sesión, y
+[`ANALISIS_AGENTE.md`](iteration-04/ANALISIS_AGENTE.md), análisis derivado que
+etiqueta cada afirmación como acuerdo, hipótesis, alternativa, recomendación o
+decisión pendiente. El análisis prioriza cerrar la reformulación de
+`EstadoDeDiseño`, formalizar `Discrepancia`, reconciliar los significados de
+tipo con la duda de `HEB 300` ya abierta en `iteration-02`, y señala una
+laguna real todavía sin conectar: el versionado por conjuntos completos del
+23 de septiembre frente al estado derivado por ocurrencia individual de esta
+sesión. `iteration-02` sigue siendo el frente activo formal; `iteration-03`
+también sigue abierta.
+
+**Documentos afectados:** `docs/iteration-04/ENUNCIADO.md` (nuevo),
+`docs/iteration-04/ANALISIS_AGENTE.md` (nuevo), `docs/WORKING_SET.md`.
+
+**Cuestiones abiertas:** las doce del encargo original (definición formal de
+Ocurrencia/Representación/Estado, persistencia del estado, ciclo de vida de
+Discrepancia, source of truth por atributo, nivel de catálogos, gestión de
+cambios en tipos compartidos, criterios de agrupación documental, identidad
+entre aplicaciones, reglas de propagación, elementos ausentes, separación
+clase/forma/sección/rol, geometría extensible y correspondencia IFC), más las
+preguntas críticas añadidas por el análisis (responsabilidad ante una vista
+derivada incorrecta, destino de discrepancias sobre ocurrencias dadas de
+baja, invalidación silenciosa por tipo vivo, autoridad de catálogo
+compartido, autoridad de discrepancias entre disciplinas, y la integración
+pendiente entre versionado por conjuntos y estado por ocurrencia).
+
+**Commit:** commit de la rama `develop` que contiene esta entrada.
+
+**Siguiente acción:** llevar `ANALISIS_AGENTE.md` a la próxima sesión conjunta
+y usar su agenda propuesta (sección 6) como punto de partida, en paralelo a
+los pendientes ya abiertos de `iteration-02` e `iteration-03`.
+
 ### 2026-09-24 — Apertura de iteration-03: revisión vs. recálculo
 
 **Objetivo:** capturar una duda operativa real de Miguel —cuándo una edición en
