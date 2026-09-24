@@ -6,7 +6,7 @@
 > **Canonical for:** historial resumido del trabajo realizado  
 > **Sources:** historial Git y documentos enlazados por cada entrada  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-23
+> **Last reviewed:** 2026-09-24
 
 ## Regla de registro
 
@@ -15,6 +15,40 @@ afectados, las cuestiones que permanecen abiertas, los commits y la siguiente
 acción. No debe copiar aquí el razonamiento que pertenece al documento conceptual.
 
 ## Entradas
+
+### 2026-09-24 — Apertura de iteration-03: revisión vs. recálculo
+
+**Objetivo:** capturar una duda operativa real de Miguel —cuándo una edición en
+STAAD/SAP2000 o en la maqueta 3D constituye un nuevo `EstadoDeDiseño` frente a
+cuándo exige recálculo— separada deliberadamente de las notas de `iteration-02`
+para no mezclar dos bloques de investigación distintos.
+
+**Resultado:** se abre `iteration-03/` con
+[`NOTAS_REVISION_VS_RECALCULO.md`](iteration-03/NOTAS_REVISION_VS_RECALCULO.md)
+como primer artefacto: distingue snapshot de estado aceptado (regla 5 de
+`RULES.md`), propone un criterio práctico ("¿de quién es este dato?"), resuelve
+los tres casos concretos aportados (elementos auxiliares en la maqueta, bandejas
+de piping sin recalcular, arriostramientos que cambian de posición) y separa
+"nuevo estado" (barato) de "requiere recálculo" (decisión explícita de quien
+tiene autoridad). Incluye una pregunta abierta sobre autoridad delegada para
+aceptar sin recálculo, con ejemplo de bandejas dentro de un margen de diseño ya
+previsto. `iteration-02` sigue siendo el frente activo; abrir esta carpeta no la
+cierra ni la sustituye. Se integró sin pérdida el commit concurrente de Luis del
+23 de septiembre (`ENTITY_SUMMARY.md` y ampliaciones relacionadas).
+
+**Documentos afectados:** `docs/iteration-03/NOTAS_REVISION_VS_RECALCULO.md`
+(nuevo), `docs/WORKING_SET.md`.
+
+**Cuestiones abiertas:** quién tiene autoridad para aceptar un estado como "no
+requiere recálculo" sin pasar por el ingeniero de cálculo en cada caso, qué
+evidencia mínima debe registrarse en ese caso, y cómo vigilar el acumulado de
+varias aceptaciones "dentro de margen" sucesivas.
+
+**Commit:** commit de la rama `develop` que contiene esta entrada.
+
+**Siguiente acción:** llevar la nota a discusión con el equipo, en paralelo a
+`iteration-02`, y decidir si la pregunta de autoridad delegada requiere su
+propia entidad (`DecisionDeAceptacion`) antes de cerrar el bloque.
 
 ### 2026-09-21 — Notas de Miguel para la sesión de iteration-02
 

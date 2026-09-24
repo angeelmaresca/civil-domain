@@ -6,7 +6,7 @@
 > **Canonical for:** estado operativo, alcance de edición y siguiente acción  
 > **Sources:** conversación inicial del equipo  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-23
+> **Last reviewed:** 2026-09-24
 
 ## Empieza aquí
 
@@ -39,6 +39,7 @@ ya no coordinan el frente activo.
 | `iteration-02/ENUNCIADO.md` | Memoria razonada, comparación con IFC y agenda opcional de la segunda iteración |
 | `iteration-02/NOTAS_TIPO_ESTADO_DISENO.md` | Notas personales de Miguel (tipo vs. estado de diseño); apoyo para la sesión, no ficha exigida |
 | `iteration-02/NOTAS_CORRESPONDENCIA_FISICO_ANALITICA.md` | Notas personales de Miguel (correspondencia físico–analítica); apoyo para la sesión, no ficha exigida |
+| `iteration-03/NOTAS_REVISION_VS_RECALCULO.md` | Nota personal de Miguel sobre cuándo cambia un `EstadoDeDiseño` frente a cuándo exige recálculo; primer artefacto de `iteration-03/` |
 | `iteration-01/` | Evidencia de consulta; las fichas individuales solo se corrigen con sus autores |
 | `iteration-01/SINTESIS.md` | Trazabilidad de la primera iteración y organización documental acordada |
 | `VOCABULARY.md` | Índice breve de términos acordados o candidatos; enlaza a su fuente propietaria |
@@ -78,6 +79,15 @@ concreto: probar y ajustar la frontera de `OcurrenciaDeDiseño`. Su primer artef
 es el enunciado de la iteración. No se crean todavía carpetas independientes para
 relaciones, reglas, decisiones, fuentes o esquemas: el volumen actual no las
 justifica y `schemas/` sería prematuro antes de cerrar el modelo conceptual.
+
+La carpeta `iteration-03/` se abre por decisión explícita de Miguel, antes de
+que `iteration-02` haya cerrado con su sesión de contraste. El artefacto
+concreto que la justifica es un caso operativo real —cuándo una edición en
+STAAD/SAP2000 o en la maqueta 3D constituye un nuevo `EstadoDeDiseño` frente
+a cuándo exige recálculo— que se mantiene deliberadamente separado de las
+notas de `iteration-02` para no mezclar dos bloques de investigación
+distintos. `iteration-02` sigue siendo el frente activo del equipo; abrir
+esta carpeta no la cierra ni la sustituye.
 
 ## Siguiente acción
 
