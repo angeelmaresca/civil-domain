@@ -6,7 +6,7 @@
 > **Canonical for:** estado operativo, alcance de edición y siguiente acción  
 > **Sources:** conversación inicial del equipo  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-24 (actualizado de nuevo el mismo día con la apertura de `iteration-04/`)
+> **Last reviewed:** 2026-10-01 (abierta `iteration-05` para contrastar `SistemaDeIngeniería`)
 
 ## Empieza aquí
 
@@ -15,18 +15,25 @@ instrucciones de [`../AGENTS.md`](../AGENTS.md).
 
 ## Hito actual
 
-Segunda iteración: someter la definición `DRAFT` de `OcurrenciaDeDiseño` a casos de
-frontera para decidir qué individuos físicos necesitan identidad en el CDM y separar
-una estructura física de un sistema funcional, un contenedor espacial, un tipo y un
-modelo analítico.
+Quinta iteración: comprobar si `SistemaDeIngeniería` aporta una identidad y una
+frontera de negocio propias para relacionar ocurrencias, modelos y conciliaciones,
+sin confundirlo con conjunto físico, sistema funcional, contenedor espacial ni
+agregado técnico. `iteration-02`, `iteration-03` e `iteration-04` conservan sus
+pendientes y evidencia; el nuevo frente los integra, no los declara cerrados.
 
 ## Documentos activos
 
-[`iteration-02/ENUNCIADO.md`](iteration-02/ENUNCIADO.md) conserva la reflexión de
-partida, el contraste explícito con IFC y los puntos que pueden investigarse en la
-próxima sesión; no exige preparar ni devolver una ficha.
-[`domain-objects/DESIGN_OCCURRENCE.md`](domain-objects/DESIGN_OCCURRENCE.md) es la
-fuente propietaria `DRAFT` que esta iteración debe intentar refutar o ajustar.
+[`iteration-05/ENUNCIADO.md`](iteration-05/ENUNCIADO.md) conserva las conclusiones
+aportadas el 1 de octubre, distingue convergencias de hipótesis y prepara los casos
+de la siguiente sesión. [`domain-objects/ENGINEERING_SYSTEM.md`](domain-objects/ENGINEERING_SYSTEM.md)
+es la fuente propietaria `DRAFT` del nuevo candidato. La definición de ocurrencia
+sigue vigente y se coordina con esta hipótesis.
+
+[`domain-objects/DESIGN_OCCURRENCE.md`](domain-objects/DESIGN_OCCURRENCE.md) conserva
+la definición propietaria `DRAFT` de la ocurrencia que el nuevo contexto debe
+respetar o ajustar. Los documentos de `iteration-02`, `iteration-03` e
+`iteration-04` conservan la evidencia y los pendientes que ahora sirven como casos
+de prueba; no exigen preparar ni devolver una ficha adicional.
 
 [`iteration-01/`](iteration-01/ENUNCIADO.md) conserva el enunciado, las tres fichas
 y la síntesis que aportan la evidencia inicial. Continúan en estado `DRAFT`, pero
@@ -42,11 +49,14 @@ ya no coordinan el frente activo.
 | `iteration-03/NOTAS_REVISION_VS_RECALCULO.md` | Nota personal de Miguel sobre cuándo cambia un `EstadoDeDiseño` frente a cuándo exige recálculo; primer artefacto de `iteration-03/` |
 | `iteration-04/ENUNCIADO.md` | Evidencia de la sesión sobre ocurrencia, representaciones, estado derivado y discrepancias; primer artefacto de `iteration-04/` |
 | `iteration-04/ANALISIS_AGENTE.md` | Análisis derivado del agente sobre esa sesión; distingue acuerdos, hipótesis, alternativas, recomendaciones y decisiones pendientes |
+| `iteration-04/ANGEL_ITERATION_04.md` | Notas personales de Ángel para recoger conclusiones provisionales y dudas durante su estudio de la cuarta iteración |
+| `iteration-05/ENUNCIADO.md` | Consolidación razonada del informe recibido y plan de contraste de sistemas, modelos, ocurrencias y conciliación |
 | `iteration-01/` | Evidencia de consulta; las fichas individuales solo se corrigen con sus autores |
 | `iteration-01/SINTESIS.md` | Trazabilidad de la primera iteración y organización documental acordada |
 | `VOCABULARY.md` | Índice breve de términos acordados o candidatos; enlaza a su fuente propietaria |
 | `ENTITY_SUMMARY.md` | Resumen derivado solicitado de entidades y conceptos candidatos, descripciones, propiedades mencionadas y pendientes; no sustituye sus fuentes propietarias |
 | `domain-objects/DESIGN_OCCURRENCE.md` | Primera definición conceptual `DRAFT` de una ocurrencia de diseño y de su frontera |
+| `domain-objects/ENGINEERING_SYSTEM.md` | Definición conceptual `DRAFT` del sistema de ingeniería candidato; probar identidad, límites y cardinalidades |
 | `RELATIONSHIPS.md` | Vocabulario y semántica `DRAFT` de relaciones entre objetos; separado del vocabulario general |
 | `RULES.md` | Reglas e invariantes conceptuales candidatos; no constituye todavía un esquema ejecutable |
 | `research/IFC_CORE_CONCEPTS.md` | Referencia didáctica; editar solo si la aplicación de los ejemplos descubre una corrección |
@@ -88,40 +98,40 @@ concreto que la justifica es un caso operativo real —cuándo una edición en
 STAAD/SAP2000 o en la maqueta 3D constituye un nuevo `EstadoDeDiseño` frente
 a cuándo exige recálculo— que se mantiene deliberadamente separado de las
 notas de `iteration-02` para no mezclar dos bloques de investigación
-distintos. `iteration-02` sigue siendo el frente activo del equipo; abrir
-esta carpeta no la cierra ni la sustituye.
+distintos. En ese momento `iteration-02` seguía siendo el frente activo del equipo;
+abrir esta carpeta no la cerró ni la sustituyó.
 
 La carpeta `iteration-04/` se abre por decisión explícita de Miguel para
 recoger una nueva sesión de trabajo (ocurrencia, representaciones, estado de
 diseño reformulado como posible vista derivada, discrepancias, entorno común,
 elementos secundarios, transferencia entre disciplinas, significados de
 "tipo" y catálogos) junto con el análisis solicitado al agente. Ninguna de las
-carpetas de iteración anteriores queda cerrada por esto: `iteration-02` sigue
-siendo el frente activo formal del equipo, e `iteration-03` sigue abierta.
+carpetas de iteración anteriores quedó cerrada por esto: en ese momento
+`iteration-02` seguía siendo el frente activo formal e `iteration-03` seguía abierta.
+
+La carpeta `iteration-05/` se crea porque existe un artefacto concreto aportado por
+Miguel: el informe de consolidación que propone desplazar el foco desde la ocurrencia
+hacia `Engineering System`. El enunciado conserva y analiza esa aportación y prepara
+su contraste. No se crean carpetas adicionales de decisiones o esquemas. La fuente
+propietaria del concepto se aloja en `domain-objects/`, carpeta ya aceptada para un
+archivo por objeto del dominio.
 
 ## Siguiente acción
 
-Bloque del 23 de septiembre cerrado: [evidencia de la conversación](iteration-02/ENUNCIADO.md#11-sesión-del-23-de-septiembre-conjuntos-y-versiones).
-Se coordinan resumen de entidades, ocurrencia, vocabulario, relaciones y reglas;
-el contenido conceptual continúa en `DRAFT`.
+Realizar la quinta iteración siguiendo
+[`iteration-05/ENUNCIADO.md`](iteration-05/ENUNCIADO.md). Antes de la sesión, cada
+participante aporta entre tres y cinco candidatos reales a sistema de ingeniería,
+rellena una ficha sencilla para uno de ellos, añade un contraejemplo, identifica al
+menos dos modelos o entregas relacionadas y describe una decisión que afecte al
+conjunto completo. `PR-05` queda documentado como ejemplo del nivel esperado.
 
-Prioridad: debatir con el equipo si el módulo incluye cimentación, aplazado
-expresamente. Sigue sin respuesta el caso de cimentación compartida. Después,
-precisar aceptación sin cambios entre versiones y estados de piezas en conjuntos.
+Durante la sesión se unificará la lista, se completará un único caso mediante una
+matriz sencilla de elementos frente a modelos y se probará una conciliación entre
+dos revisiones reales. Solo después se traducirá el resultado al vocabulario formal.
 
-Revisar conjuntamente la reflexión de
-[`iteration-02/ENUNCIADO.md`](iteration-02/ENUNCIADO.md), en especial las diferencias
-entre `IfcObject`, `IfcProduct`, assembly físico, sistema, estructura espacial y
-modelo analítico. Acordar qué divergencias del CDM son deliberadas y cuáles revelan
-un concepto ausente o una frontera mal definida.
-
-Como apoyo a la conversación, aplicar cuando resulte útil los contraejemplos de
-sustitución, división, fusión, traslado y agrupación temporal a `ST-01`, `C-101`,
-`B-101`, `F-101` y `EQ-101`. No se solicita una ficha. Cualquier ajuste se trasladará
-a [`OcurrenciaDeDiseño`](domain-objects/DESIGN_OCCURRENCE.md),
-[`RELATIONSHIPS.md`](RELATIONSHIPS.md), [`RULES.md`](RULES.md) o
-[`VOCABULARY.md`](VOCABULARY.md), manteniendo el contenido en `DRAFT` hasta el
-contraste humano.
+Los pendientes de cimentación compartida, modelos simultáneamente válidos, autoridad
+por aspecto e identidad de ocurrencia pasan a ser casos de prueba de este frente.
+Todo contenido conceptual continúa `DRAFT` hasta contraste humano.
 
 ## Decisiones operativas vigentes
 

@@ -4,9 +4,9 @@
 > **Editable:** sí; definición conceptual para contraste del equipo
 > **Document owner:** equipo de dominio civil
 > **Canonical for:** —
-> **Sources:** [síntesis de la primera iteración](../iteration-01/SINTESIS.md), fichas de [Ángel](../iteration-01/FICHA_ANGEL_COLUMNA.md), [Luis](../iteration-01/FICHA_LUIS_ZAPATA.md) y [Miguel](../iteration-01/FICHA_MIGUEL_ACCIONES_CARGAS.md), [estudio IFC](../research/IFC_CORE_CONCEPTS.md) y decisión del equipo del 2026-09-18
+> **Sources:** [síntesis de la primera iteración](../iteration-01/SINTESIS.md), fichas de [Ángel](../iteration-01/FICHA_ANGEL_COLUMNA.md), [Luis](../iteration-01/FICHA_LUIS_ZAPATA.md) y [Miguel](../iteration-01/FICHA_MIGUEL_ACCIONES_CARGAS.md), [estudio IFC](../research/IFC_CORE_CONCEPTS.md), decisión del equipo del 2026-09-18 y [quinta iteración](../iteration-05/ENUNCIADO.md)
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-23
+> **Last reviewed:** 2026-10-01
 
 ## Decisión de partida
 
@@ -15,6 +15,13 @@ necesitan una identidad estable mientras cambian sus datos y representaciones. N
 conviene convertirla en una raíz universal de todo el CDM. Acciones, tipos, espacios,
 sistemas funcionales, modelos analíticos, resultados y relaciones tienen criterios
 de identidad distintos.
+
+La [quinta iteración](../iteration-05/ENUNCIADO.md) refuerza esta última cautela:
+`OcurrenciaDeDiseño` no es el contenedor de los modelos. La hipótesis actual asocia
+modelos y ocurrencias dentro de un [`SistemaDeIngeniería`](ENGINEERING_SYSTEM.md), y
+conecta cada ocurrencia con lo afirmado por un modelo mediante representaciones.
+Esta reubicación es `DRAFT`; no exige todavía que toda ocurrencia pertenezca a un
+sistema ni fija una jerarquía exclusiva.
 
 El nombre se mantiene por ahora por continuidad con la primera iteración. En este
 documento significa específicamente una **ocurrencia física de diseño**. Si el CDM
@@ -74,6 +81,11 @@ tampoco se deduce automáticamente de la última importación.
 | Pertenencia, composición, apoyo o conexión | No como un único `parent` | Relaciones tipadas y, cuando cambien, versionadas |
 | Forma analítica | No | Modelo/objeto analítico y correspondencia físico–analítica |
 | Pieza construida | No | Futuro objeto de realización/activo y su correspondencia |
+
+La ocurrencia tampoco mantiene una copia «canónica» mutable de sección, material,
+geometría, armadura, cargas o resultados. Una vista puede resolver valores desde
+estados, fuentes y políticas de autoridad identificados, conservando procedencia y
+sin convertirse en una segunda fuente de verdad.
 
 No se proponen todavía columnas de base de datos, clases de implementación ni una
 API. La tabla reparte responsabilidades semánticas.
@@ -188,6 +200,7 @@ necesita al menos estas responsabilidades, aunque varias aún no tengan archivo 
 | `ModeloAnalitico` y `ObjetoAnalitico` | ¿Cómo se idealiza para calcular? | Se enlazan mediante correspondencias trazables. |
 | `RelacionDeDiseño` | ¿Qué vínculo semántico existe y cuándo? | Conecta ocurrencias u otros objetos sin reducirse a `parentId`. |
 | `DecisionDeAceptacion` | ¿Quién aceptó qué estado y con qué evidencia? | Determina vigencia técnica sin borrar historia. |
+| `SistemaDeIngeniería` | ¿En qué contexto de negocio se relacionan ocurrencias, modelos y conciliaciones? | Contextualiza la ocurrencia sin poseer necesariamente su lifecycle. |
 
 Esta lista es un mapa de dependencias, no una lista aprobada de tablas.
 
@@ -208,6 +221,30 @@ La semántica y cardinalidad candidatas viven en
 - `sustituye a`, cuando hay fusión, división o reemplazo sin continuidad de identidad.
 
 No todas unen dos ocurrencias ni todas comparten lifecycle, cardinalidad o autoridad.
+
+## Contexto de modelos y sistemas de ingeniería
+
+La separación candidata de la quinta iteración es:
+
+```text
+SistemaDeIngeniería PR-05
+├── tiene asociado → Modelo SP3D COORD
+├── tiene asociado → Modelo STAAD ESTÁTICO
+└── contextualiza → C-101, B-101, ...
+
+C-101
+├── está representada en → SP3D COORD / revisión P13
+└── está idealizada en → STAAD ESTÁTICO / revisión S06
+```
+
+El modelo no pertenece a `C-101`: puede cubrir muchas ocurrencias y tiene revisiones
+propias. La representación tampoco es el dato técnico definitivo de la ocurrencia;
+conserva lo que un modelo afirma en una revisión y para un propósito concretos.
+
+La relación con el sistema permanece abierta a cardinalidad múltiple. Un modelo
+global puede cubrir varios sistemas y una ocurrencia puede participar en distintos
+contextos. Duplicar la identidad para forzar un árbol sería una refutación del
+modelo, no una solución.
 
 ## Reglas candidatas de identidad
 
