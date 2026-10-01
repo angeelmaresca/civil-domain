@@ -4,9 +4,9 @@
 > **Editable:** sí; catálogo conceptual dentro de `WORKING_SET.md`
 > **Document owner:** equipo de dominio civil
 > **Canonical for:** —
-> **Sources:** [síntesis de la primera iteración](iteration-01/SINTESIS.md), [ocurrencia de diseño](domain-objects/DESIGN_OCCURRENCE.md), fichas de la primera iteración y [estudio IFC](research/IFC_CORE_CONCEPTS.md)
+> **Sources:** [síntesis de la primera iteración](iteration-01/SINTESIS.md), [ocurrencia de diseño](domain-objects/DESIGN_OCCURRENCE.md), [sistema de ingeniería](domain-objects/ENGINEERING_SYSTEM.md), fichas de la primera iteración y [estudio IFC](research/IFC_CORE_CONCEPTS.md)
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-23
+> **Last reviewed:** 2026-10-01
 
 ## Propósito
 
@@ -35,6 +35,29 @@ representación en tablas, clases o grafos permanecen abiertos.
 | `está representado por` | estado → representación | Vincula un objeto con una forma o descripción para un propósito. | Identidad entre representación y objeto. |
 | `está documentado por` | estado/afirmación → snapshot de fuente | Conserva evidencia y procedencia de una afirmación. | Que la fuente tenga autoridad universal. |
 | `sustituye a` | ocurrencia nueva → ocurrencia anterior | Conserva trazabilidad cuando no hay continuidad de identidad. | Una nueva revisión de la misma ocurrencia. |
+| `participa en sistema de ingeniería` | ocurrencia → sistema de ingeniería | Contextualiza el papel de la ocurrencia en un ámbito de trabajo. | Composición física, contención espacial o ownership exclusivo. |
+| `tiene modelo asociado` | sistema de ingeniería → modelo de ingeniería | Declara que un modelo cubre total o parcialmente el sistema para un rol, propósito y vigencia. | Que el modelo pertenezca a una ocurrencia o no pueda cubrir otros sistemas. |
+| `aparece en modelo mediante` | ocurrencia → representación → modelo/revisión | Conserva cómo una ocurrencia está tratada en un modelo concreto. | Que ocurrencia, objeto de modelo y representación compartan identidad. |
+| `delimita caso de conciliación` | sistema de ingeniería → caso de conciliación | Aporta un ámbito de negocio candidato para seleccionar modelos, revisiones y políticas. | Que toda conciliación quede encerrada en un único sistema. |
+
+## Sistemas, modelos y representaciones
+
+Las relaciones de la quinta iteración forman una red navegable, no un árbol de
+propiedad:
+
+```text
+SistemaDeIngeniería ← participa en — OcurrenciaDeDiseño
+         │                               │
+         └— tiene modelo asociado        └— aparece en modelo mediante
+                         │                         │
+                         └──── Modelo ← Representación
+```
+
+La asociación sistema–modelo debe poder expresar cobertura total o parcial, rol,
+propósito, disciplina, fase y vigencia. La representación debe identificar modelo y
+revisión, propósito, referencia externa y forma de cobertura. Las cardinalidades
+siguen abiertas: los casos de modelo global, cimentación compartida y ocurrencia
+multi-sistema deben decidirlas.
 
 ## Composición física
 

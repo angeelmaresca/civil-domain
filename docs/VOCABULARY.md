@@ -6,7 +6,7 @@
 > **Canonical for:** —
 > **Sources:** [síntesis de la primera iteración](iteration-01/SINTESIS.md) y documentos propietarios enlazados por cada término
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-23
+> **Last reviewed:** 2026-10-01
 
 ## Propósito
 
@@ -27,6 +27,11 @@ aquí no implica que el concepto ni su nombre estén aprobados.
 | Idealización analítica | Objeto o formulación creada para un análisis y propósito concretos. | Candidato | [Síntesis v0.1](iteration-01/SINTESIS.md#vocabulario-mínimo-propuesto-para-contrastar-v01) |
 | Conciliación de identidad | Afirmación justificada de que dos objetos físicos de fuente representan la misma ocurrencia. | Candidato | [Síntesis v0.1](iteration-01/SINTESIS.md#vocabulario-mínimo-propuesto-para-contrastar-v01) |
 | Correspondencia físico–analítica | Vínculo trazable entre un estado físico y una idealización analítica. | Candidato | [`RELATIONSHIPS.md`](RELATIONSHIPS.md#correspondencia-físicoanalítica) |
+| Sistema de ingeniería | Contexto de negocio con identidad y frontera candidatas que relaciona ocurrencias, modelos y conciliación. | Hipótesis para refutar en `iteration-05` | [`SistemaDeIngeniería`](domain-objects/ENGINEERING_SYSTEM.md#definición-candidata) |
+| Modelo de ingeniería | Artefacto con identidad, propósito y revisiones propios, asociado a uno o varios contextos de ingeniería. | Candidato; falta decidir una abstracción común | [Quinta iteración](iteration-05/ENUNCIADO.md#2-conclusiones-que-se-conservan) |
+| Representación | Línea contextual que enlaza una ocurrencia con lo que un modelo expresa sobre ella; se concreta por snapshots o revisiones. | Candidato | [Notas de Ángel](iteration-04/ANGEL_ITERATION_04.md#5-representación-y-versiones-concretas) |
+| Caso de conciliación | Comparación contextualizada que identifica alcance, modelos, revisiones, políticas, discrepancias y decisiones. | Candidato; nombre abierto | [Notas de Ángel](iteration-04/ANGEL_ITERATION_04.md#7-estado-de-diseño-y-conciliación-entre-representaciones) |
+| Vista resuelta de propiedades | Consulta que selecciona o deriva valores desde afirmaciones con procedencia y autoridad para un propósito concreto. | Hipótesis; no es una copia maestra | [Quinta iteración](iteration-05/ENUNCIADO.md#44-propiedad-canónica-no-significa-copia-maestra) |
 
 ## Convención de uso
 

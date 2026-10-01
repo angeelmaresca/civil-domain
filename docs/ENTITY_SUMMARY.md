@@ -6,7 +6,7 @@
 > **Canonical for:** —; documento de consulta, no fuente de definiciones  
 > **Sources:** documentos propietarios y fichas enlazados en cada apartado  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-23
+> **Last reviewed:** 2026-10-01
 
 ## Qué recoge este documento
 
@@ -32,7 +32,7 @@ de trabajo, no clases de software adoptadas.
 | [ELEMENT_INVENTORY.md](ELEMENT_INVENTORY.md) | ¿Qué conceptos podrían intervenir en el dominio civil? | Inventario amplio de exploración, con semillas y preguntas; una entrada no implica una entidad. |
 | Este resumen | ¿Qué hemos mencionado o desarrollado y qué datos conocemos de cada candidato? | Vista de consulta transversal, con propiedades documentadas y vacíos visibles. |
 | [VOCABULARY.md](VOCABULARY.md) | ¿Qué significa brevemente un término y dónde se define? | Índice terminológico. |
-| [domain-objects/DESIGN_OCCURRENCE.md](domain-objects/DESIGN_OCCURRENCE.md) y futuras definiciones individuales | ¿Cuál es la definición, identidad y frontera de un objeto concreto? | Fuente propietaria por objeto; actualmente solo la ocurrencia dispone de ese documento. |
+| [domain-objects/DESIGN_OCCURRENCE.md](domain-objects/DESIGN_OCCURRENCE.md), [domain-objects/ENGINEERING_SYSTEM.md](domain-objects/ENGINEERING_SYSTEM.md) y futuras definiciones individuales | ¿Cuál es la definición, identidad y frontera de un objeto concreto? | Fuente propietaria por objeto; actualmente están desarrollados la ocurrencia y el sistema de ingeniería candidato. |
 | [RELATIONSHIPS.md](RELATIONSHIPS.md) | ¿Qué significan los vínculos entre objetos? | Fuente propietaria de la semántica de relaciones. |
 
 El inventario es el punto de partida amplio; las fichas han profundizado en una
@@ -55,6 +55,7 @@ y [relaciones](RELATIONSHIPS.md). Todas las filas son candidatas.
 | **Agrupación derivada** | Conjunto calculado por similitud de propiedades. | Propiedades comparadas; miembros obtenidos. | No equivale a tipo declarado ni necesariamente necesita identidad propia. |
 | **Estructura física / conjunto físico** | Todo físico concreto que puede tener continuidad y partes propias. | Identidad, límite, revisión y ciclo de vida; relaciones de composición con columnas, vigas u otras partes. | Debe justificar identidad separada; su forma puede derivarse de las partes. |
 | **Sistema funcional / sistema estructural** | Objetos que colaboran para una función. | Función; miembros mediante relaciones potencialmente muchos-a-muchos. | La membresía no implica composición ni propiedad del ciclo de vida. |
+| **Sistema de ingeniería** | Contexto de negocio candidato que relaciona ocurrencias, modelos y conciliaciones dentro de una frontera explícita. | Identidad; propósito; límite; ocurrencias contextualizadas; modelos asociados con rol, cobertura y vigencia; políticas/casos aplicables. | Debe distinguirse del conjunto físico, sistema funcional y espacio; cardinalidades y obligatoriedad abiertas. |
 | **Contexto o contenedor espacial** | Organización espacial de objetos: área, planta, nivel o instalación. | Identidad y placement cuando procedan; contención principal y referencias espaciales adicionales. | No es una ocurrencia física por el solo hecho de contener objetos. |
 | **Decisión de aceptación** | Decisión que reconoce un estado y su evidencia. | Quién acepta; estado/revisión; evidencia que fundamenta la decisión. | Autoridades y procedimiento aún abiertos; distinguirla de la validación de cálculos. |
 | **Propuesta y aceptación de baja** | Proceso de decidir si una ocurrencia se retira del diseño. | Ocurrencia; evidencia de ausencia y alcance de la fuente; decisión responsable; revisión desde la que deja de estar activa. | Son conceptos de decisión; no se ha fijado una entidad independiente por cada paso. |
@@ -118,7 +119,8 @@ y [Luis, §11](iteration-01/FICHA_LUIS_ZAPATA.md#11-esfuerzos-desplazamientos-y-
 
 | Concepto | Descripción resumida | Propiedades o referencias mencionadas | Frontera o pendiente |
 |---|---|---|---|
-| **Modelo analítico** | Idealización con propósito y ciclo de vida propios que puede representar múltiples elementos físicos. | Propósito, hipótesis, objetos, revisiones y procedencia/herramienta cuando exista. | No pertenece a una sola columna ni exige siempre malla. |
+| **Modelo de ingeniería** | Artefacto con identidad, propósito, cobertura y revisiones propios. | Rol físico, analítico, documental u otro; propósito; cobertura; disciplina/herramienta; revisiones; sistemas asociados. | Abstracción común todavía por demostrar; no pertenece a una ocurrencia individual. |
+| **Modelo analítico** | Idealización con propósito y ciclo de vida propios que puede representar múltiples elementos físicos. | Propósito, hipótesis, objetos, revisiones y procedencia/herramienta cuando exista. | No pertenece a una sola columna ni exige siempre malla; falta decidir su relación exacta con el candidato general `ModeloDeIngeniería`. |
 | **Revisión de modelo analítico** | Versión identificada de la topología y datos empleados. | Modelo, revisión, objetos/conectividad y datos de cálculo utilizados. | Diferente de la revisión física. |
 | **Objeto analítico / idealización** | Nodo, barra, placa, superficie u otra representación para analizar. | Identidad contextual en el modelo/revisión; geometría/topología; propiedades analíticas según su naturaleza. | No todos los métodos precisan los mismos objetos; también hay formulaciones sin discretización. |
 | **Nodo / nudo** | Objeto puntual de la topología analítica. | Posición en el modelo; conectividad; condiciones de apoyo si corresponden. | Desplazamientos y reacciones son resultados contextualizados, no propiedades físicas de la columna. |
@@ -147,11 +149,14 @@ Fuentes: [Ángel, §§8–9](iteration-01/FICHA_ANGEL_COLUMNA.md),
 | **Modelo fuente y revisión** (`ExternalModelRevision`) | Entrega concreta de una aplicación o proceso. | Aplicación/procedencia, modelo, revisión, alcance completo o parcial y rol de la información. | El programa de origen no determina por sí solo si todos sus objetos son físicos o analíticos. |
 | **Referencia externa** (`ExternalObjectReference`) | Identificador contextual de un objeto en una fuente. | ID nativo/TAG/código, aplicación, modelo y revisión. | No sustituye al ID interno del CDM. |
 | **Snapshot importado** (`ImportedObjectSnapshot`) | Afirmación conservada de una fuente sobre un objeto en una revisión. | Referencia de fuente y datos recibidos en esa revisión. | Evidencia que puede diferir de otra fuente; no es automáticamente estado aceptado. |
+| **Representación** | Continuidad contextual que enlaza una ocurrencia con lo que un modelo expresa sobre ella para un propósito. | Ocurrencia; modelo; propósito; snapshots por revisión; referencias externas; forma y cobertura. | No es la ocurrencia ni el modelo; puede cambiar topología entre snapshots. |
 | **Placement de fuente** (`SourcePlacement`) | Localización tal como la declara la fuente. | Placement, unidades, sistema de coordenadas; transformación normalizada conservando el original. | Concepto de intercambio; autonomía como entidad no decidida. |
 | **Conciliación de identidad** (`IdentityMatch`) | Justificación de que objetos físicos de fuente corresponden a una ocurrencia. | Snapshots/referencias comparados, ocurrencia, criterio/evidencia y confirmación o ambigüedad. | Nombre o proximidad no bastan; no se usa para igualar físico con analítico. |
 | **Correspondencia físico–analítica** (`PhysicalAnalyticalMapping`) | Relación trazable entre estados/snapshots físicos y objetos o zonas analíticos. | Participantes y roles, revisiones, propósito, cobertura, cardinalidad, evidencia, autor, referencias y transformaciones. | Admite `1:1`, `1:N`, `N:1`, `N:M`. La correspondencia histórica no se reescribe por un nuevo estado físico. |
 | **Evaluación de alineación** (`AlignmentAssessment`) | Juicio sobre una correspondencia frente a una revisión física de comparación. | Correspondencia, revisión comparada, aspecto evaluado, estado y motivos. | No equivale a aprobar técnicamente el elemento. |
 | **Relación de diseño** | Vínculo semántico contextualizado: composición, pertenencia, conexión, apoyo, tipado u otros. | Tipo de vínculo, participantes, contexto, vigencia, procedencia y datos particulares. | No sustituir toda la semántica por un único padre o vínculo genérico. |
+| **Caso de conciliación** | Contexto histórico de una comparación y sus decisiones. | Alcance; propósito; sistemas; modelos y revisiones; políticas; aspectos comparados; discrepancias; decisiones y resultado. | Nombre y lifecycle abiertos; puede abarcar sistema, conjunto u ocurrencia. |
+| **Vista resuelta de propiedades** | Selección o derivación de valores para una consulta, aspecto y momento concretos. | Fuentes y revisiones; política de autoridad; transformaciones; valor y procedencia resultantes. | No es una copia maestra dentro de la ocurrencia ni una autoridad universal. |
 | **Referencia de clasificación** | Asociación a un vocabulario externo o acordado. | Objeto clasificado y referencia al vocabulario. | No crea identidad ni tipo intencional; catálogo y detalle pendientes. |
 
 ## 7. Otros conceptos mencionados, todavía sin desarrollo suficiente
@@ -195,6 +200,9 @@ como entidades propias por aparecer en la documentación externa. Véase el
   no acredita por sí sola vigencia técnica. Véanse las [notas físico–analíticas](iteration-02/NOTAS_CORRESPONDENCIA_FISICO_ANALITICA.md).
 - **Propiedades y ownership:** no existe todavía un catálogo exhaustivo ni una matriz
   aprobada de responsables por dato. Este resumen no los introduce.
+- **Sistemas de ingeniería:** falta demostrar que aportan identidad y responsabilidades
+  distintas del conjunto físico, sistema funcional o espacio. También están abiertas
+  la pertenencia múltiple, la cobertura parcial y la conciliación transversal.
 
 Cuando se desarrolle un candidato, sus definiciones y propiedades se precisarán en
 su fuente propietaria y aquí se actualizará únicamente la síntesis y el enlace.

@@ -4,9 +4,9 @@
 > **Editable:** sí; reglas conceptuales dentro de `WORKING_SET.md`
 > **Document owner:** equipo de dominio civil
 > **Canonical for:** —
-> **Sources:** [síntesis de la primera iteración](iteration-01/SINTESIS.md), [ocurrencia de diseño](domain-objects/DESIGN_OCCURRENCE.md) y fichas de la primera iteración
+> **Sources:** [síntesis de la primera iteración](iteration-01/SINTESIS.md), [ocurrencia de diseño](domain-objects/DESIGN_OCCURRENCE.md), [sistema de ingeniería](domain-objects/ENGINEERING_SYSTEM.md) y fichas de la primera iteración
 > **Supersedes:** —
-> **Last reviewed:** 2026-09-23
+> **Last reviewed:** 2026-10-01
 
 ## Alcance
 
@@ -69,6 +69,28 @@ Reglas `DRAFT` para los casos tratados, pendientes del equipo.
     pieza a pieza. No extender esta simplificación a todos los casos.
 22. Reutilizar TAG no equivale a reutilizar identidad interna; decidir continuidad
     del módulo es distinto de conservar su código.
+
+## Sistemas, modelos y conciliación — hipótesis para la quinta iteración
+
+Fuente: [quinta iteración](iteration-05/ENUNCIADO.md). Reglas `DRAFT` que deben
+intentarse refutar con modelos globales, fronteras compartidas y pertenencia múltiple.
+
+23. Un modelo de ingeniería tiene identidad, propósito y revisiones propios; no
+    pertenece a una ocurrencia individual aunque pueda representarla.
+24. Una ocurrencia aparece en un modelo mediante una representación contextualizada.
+    El objeto o referencia del modelo no sustituye su identidad interna.
+25. Asociar un modelo o una ocurrencia a un sistema de ingeniería no implica
+    ownership exclusivo. No se fijará cardinalidad uno-a-muchos sin resolver los
+    casos de cobertura global y sistemas compartidos.
+26. Un caso de conciliación identifica propósito, alcance, modelos y revisiones,
+    aspectos comparables, políticas aplicadas y responsables de las decisiones.
+27. Una diferencia entre modelos solo es discrepancia si incumple una expectativa
+    declarada de cobertura, equivalencia, tolerancia o autoridad para ese alcance.
+28. Una vista resuelta conserva fuentes, revisiones, aspecto, política y momento de
+    resolución; no duplica silenciosamente valores técnicos en la ocurrencia.
+29. `SistemaDeIngeniería` permanece como frontera conceptual candidata. No se declara
+    agregado raíz hasta que existan decisiones explícitas de consistencia,
+    transacción e implementación.
 
 ## Criterio de madurez
 

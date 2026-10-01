@@ -6,7 +6,7 @@
 > **Canonical for:** historial resumido del trabajo realizado  
 > **Sources:** historial Git y documentos enlazados por cada entrada  
 > **Supersedes:** —  
-> **Last reviewed:** 2026-09-24
+> **Last reviewed:** 2026-10-01
 
 ## Regla de registro
 
@@ -15,6 +15,49 @@ afectados, las cuestiones que permanecen abiertas, los commits y la siguiente
 acción. No debe copiar aquí el razonamiento que pertenece al documento conceptual.
 
 ## Entradas
+
+### 2026-10-01 — Consolidación de iteration-04 y apertura guiada de iteration-05
+
+**Objetivo:** incorporar las notas de estudio de Ángel sobre representaciones,
+estados y conciliación multi-modelo; analizar el informe posterior que propone
+`Engineering System` como contexto superior a la ocurrencia; coordinar las fuentes
+conceptuales y dejar preparada una siguiente iteración comprensible para el equipo.
+
+**Resultado:** se incorpora
+[`ANGEL_ITERATION_04.md`](iteration-04/ANGEL_ITERATION_04.md) como evidencia personal
+`DRAFT`. Se abre [`iteration-05/`](iteration-05/ENUNCIADO.md) con la hipótesis de
+`SistemaDeIngeniería`, sus cautelas y un ejercicio guiado: traducción del vocabulario
+a preguntas ordinarias, ejemplo rellenado de `PR-05`, lista inicial de candidatos y
+contraejemplos, plantilla copiable y cinco deberes concretos por participante. Se
+crea [`ENGINEERING_SYSTEM.md`](domain-objects/ENGINEERING_SYSTEM.md) como fuente
+propietaria `DRAFT`; el concepto se trata como contexto candidato, no como agregado
+raíz ni como propietario exclusivo de modelos u ocurrencias. Se coordinan ocurrencia,
+vocabulario, relaciones, reglas, resumen de entidades y conjunto de trabajo.
+
+**Documentos afectados:** `docs/iteration-04/ANGEL_ITERATION_04.md`,
+`docs/iteration-05/ENUNCIADO.md`, `docs/domain-objects/ENGINEERING_SYSTEM.md`,
+`docs/domain-objects/DESIGN_OCCURRENCE.md`, `docs/VOCABULARY.md`,
+`docs/RELATIONSHIPS.md`, `docs/RULES.md`, `docs/ENTITY_SUMMARY.md`,
+`docs/WORKING_SET.md` y este registro.
+
+**Cuestiones abiertas:** si `SistemaDeIngeniería` tiene identidad y responsabilidades
+propias frente a conjunto físico, sistema funcional y contexto espacial; si modelos
+y ocurrencias pueden asociarse a varios sistemas; cómo representar cobertura parcial
+y fronteras compartidas; qué candidatos reconoce realmente el equipo; y qué alcance
+tiene una conciliación transversal. Todo el contenido conceptual permanece `DRAFT`.
+
+**Validación:** revisión del diff, cabeceras documentales, enlaces Markdown locales
+y `git diff --check`. No se modifican inventario, modelo conceptual de consulta ni
+documentos `CANONICAL` salvo los registros operativos autorizados.
+
+**Commit:** commit de la rama `docs/angel-iteration-04-study` que contiene esta
+entrada, publicada en `origin` para abrir un PR contra `develop`.
+
+**Siguiente acción:** cada participante propone entre tres y cinco sistemas de
+ingeniería reales, rellena una ficha para uno, aporta un contraejemplo, identifica
+dos modelos o entregas y describe una decisión que solo tenga sentido sobre el
+conjunto. La sesión unificará la lista y probará un caso de conciliación real antes
+de ajustar el modelo conceptual.
 
 ### 2026-09-24 — Apertura de iteration-04: ocurrencia, representaciones y discrepancias
 
